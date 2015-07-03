@@ -71,11 +71,15 @@ namespace Project15
         }
 
         Point empty = new Point(3, 3);
+        Random rnd = new Random();
+        int difficulty = 15;
+        int counter = 0;
+
         void swap_empty(Point a)
         {
-            string temp = panel[(int) a.X][(int) a.Y].getnum();
-            panel[(int)a.X][(int)a.Y].swap(panel[(int)empty.X][(int)empty.Y].getnum());
-            panel[(int)empty.X][(int)empty.Y].swap(temp);
+            string temp = panel[(int) a.X][(int) a.Y].n;
+            panel[(int)a.X][(int)a.Y].n = panel[(int)empty.X][(int)empty.Y].n;
+            panel[(int)empty.X][(int)empty.Y].n = temp;
             empty = a;
         }
 
@@ -90,6 +94,7 @@ namespace Project15
                         pos = new Point(i, j);
                         break;
                     }
+
             if (pos.X == empty.X)
             {
                 if (pos.Y < empty.Y)
@@ -121,48 +126,83 @@ namespace Project15
                 }
             }
 
-            image1.Source = new BitmapImage(new Uri(base.BaseUri, panel[0][0].getnum()));
-            image2.Source = new BitmapImage(new Uri(base.BaseUri, panel[0][1].getnum()));
-            image3.Source = new BitmapImage(new Uri(base.BaseUri, panel[0][2].getnum()));
-            image4.Source = new BitmapImage(new Uri(base.BaseUri, panel[0][3].getnum()));
-            image5.Source = new BitmapImage(new Uri(base.BaseUri, panel[1][0].getnum()));
-            image6.Source = new BitmapImage(new Uri(base.BaseUri, panel[1][1].getnum()));
-            image7.Source = new BitmapImage(new Uri(base.BaseUri, panel[1][2].getnum()));
-            image8.Source = new BitmapImage(new Uri(base.BaseUri, panel[1][3].getnum()));
-            image9.Source = new BitmapImage(new Uri(base.BaseUri, panel[2][0].getnum()));
-            image10.Source = new BitmapImage(new Uri(base.BaseUri, panel[2][1].getnum()));
-            image11.Source = new BitmapImage(new Uri(base.BaseUri, panel[2][2].getnum()));
-            image12.Source = new BitmapImage(new Uri(base.BaseUri, panel[2][3].getnum()));
-            image13.Source = new BitmapImage(new Uri(base.BaseUri, panel[3][0].getnum()));
-            image14.Source = new BitmapImage(new Uri(base.BaseUri, panel[3][1].getnum()));
-            image15.Source = new BitmapImage(new Uri(base.BaseUri, panel[3][2].getnum()));
-            image16.Source = new BitmapImage(new Uri(base.BaseUri, panel[3][3].getnum()));
-            /*
-            Thickness f = g.Margin;
-            f.Left = 0;
-            f.Right = 0;
-            f.Top = 0;
-            f.Bottom = 0;
-            g.Margin = f;
-            */
-            /*
-            string str = "";
-            for (int i = 0; i < 4; i++)
-            {
-                for (int j = 0; j < 4; j++)
-                    str += panel[i][j].getnum().ToString();
-                str += "\n";
-            }
-            textBox.Text = str;
-            */
+            counter++;
+            textBlock.Text = "Clicks: " + counter;
+
+            image1.Source = new BitmapImage(new Uri(base.BaseUri, panel[0][0].n));
+            image2.Source = new BitmapImage(new Uri(base.BaseUri, panel[0][1].n));
+            image3.Source = new BitmapImage(new Uri(base.BaseUri, panel[0][2].n));
+            image4.Source = new BitmapImage(new Uri(base.BaseUri, panel[0][3].n));
+            image5.Source = new BitmapImage(new Uri(base.BaseUri, panel[1][0].n));
+            image6.Source = new BitmapImage(new Uri(base.BaseUri, panel[1][1].n));
+            image7.Source = new BitmapImage(new Uri(base.BaseUri, panel[1][2].n));
+            image8.Source = new BitmapImage(new Uri(base.BaseUri, panel[1][3].n));
+            image9.Source = new BitmapImage(new Uri(base.BaseUri, panel[2][0].n));
+            image10.Source = new BitmapImage(new Uri(base.BaseUri, panel[2][1].n));
+            image11.Source = new BitmapImage(new Uri(base.BaseUri, panel[2][2].n));
+            image12.Source = new BitmapImage(new Uri(base.BaseUri, panel[2][3].n));
+            image13.Source = new BitmapImage(new Uri(base.BaseUri, panel[3][0].n));
+            image14.Source = new BitmapImage(new Uri(base.BaseUri, panel[3][1].n));
+            image15.Source = new BitmapImage(new Uri(base.BaseUri, panel[3][2].n));
+            image16.Source = new BitmapImage(new Uri(base.BaseUri, panel[3][3].n));
+
+            if (check_win() == true)
+                button.Visibility = Visibility.Visible;
         }
 
+        private void Shuffle(object sender, RoutedEventArgs e)
+        {
+            button.Visibility = Visibility.Collapsed;
+            for (int i = 0; i < difficulty; i++)
+            {
+                Tile y;
+                int x = rnd.Next() % 3;
+                if (x >= empty.Y)
+                    x++;
+
+                y = panel[(int)empty.X][x];
+                move(y.i, new TappedRoutedEventArgs());
+
+                x = rnd.Next() % 3;
+                if (x >= empty.Y)
+                    x++;
+
+                y = panel[x][(int)empty.Y];
+                move(y.i, new TappedRoutedEventArgs());
+            }
+            counter = 0;
+            textBlock.Text = "Clicks: " + counter;
+        }
+
+        private Boolean check_win()
+        {
+            if (panel[3][3].n != "")
+                return false;
+
+            return (
+            panel[0][0].n == "/Assets/1.png"
+            && panel[0][1].n == "/Assets/2.png"
+            && panel[0][2].n == "/Assets/3.png"
+            && panel[0][3].n == "/Assets/4.png"
+            && panel[1][0].n == "/Assets/5.png"
+            && panel[1][1].n == "/Assets/6.png"
+            && panel[1][2].n == "/Assets/7.png"
+            && panel[1][3].n == "/Assets/8.png"
+            && panel[2][0].n == "/Assets/9.png"
+            && panel[2][1].n == "/Assets/10.png"
+            && panel[2][2].n == "/Assets/11.png"
+            && panel[2][3].n == "/Assets/12.png"
+            && panel[3][0].n == "/Assets/13.png"
+            && panel[3][1].n == "/Assets/14.png"
+            && panel[3][2].n == "/Assets/15.png"
+       );
+        }
     }
 
     public class Tile
     {
-        string n;
-        Image i;
+        public string n { get; set; }
+        public Image i { get; }
         public Tile(string nu, Image im)
         {
             n = nu;

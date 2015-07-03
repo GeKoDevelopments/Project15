@@ -24,6 +24,7 @@
         <Image x:Name="image14" HorizontalAlignment="Left" Height="100" Margin="557,551,0,0" VerticalAlignment="Top" Width="100" Source="Assets/14.png" Tapped="move"/>
         <Image x:Name="image15" HorizontalAlignment="Left" Height="100" Margin="707,551,0,0" VerticalAlignment="Top" Width="100" Source="Assets/15.png" Tapped="move"/>
         <Image x:Name="image16" HorizontalAlignment="Left" Height="100" Margin="857,551,0,0" VerticalAlignment="Top" Width="100" Tapped="move"/>
-        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="99,101,0,0" VerticalAlignment="Top" Height="53" Width="120"/>
+        <Button x:Name="button" Content="Shuffle" HorizontalAlignment="Left" Margin="108,98,0,0" VerticalAlignment="Top" Height="53" Width="120" Background="#FFFF8C8C" Click="Shuffle"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="1040,101,0,0" TextWrapping="Wrap" Text="Clicks: 0" VerticalAlignment="Top" FontSize="32" Foreground="Black"/>
     </Grid>
 </Page>
