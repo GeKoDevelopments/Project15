@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>HOME</Machine>
+    <WindowsUser>Κωνσταντίνος</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>1de29911-0862-497e-804d-a8b733fc454a</PackageIdentityName>
+    <IntermediateOutputPath>C:\Visual Studio 2015\Projects\Project15\Project15\obj\Debug\</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Visual Studio 2015\Projects\Project15\Project15\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Visual Studio 2015\Projects\Project15\Project15\bin\Debug\Project15.exe">
+      <PackagePath>Project15.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Visual Studio 2015\Projects\Project15\Project15\Assets\1.png">
+      <PackagePath>Assets\1.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Visual Studio 2015\Projects\Project15\Project15\Assets\10.png">
+      <PackagePath>Assets\10.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Visual Studio 2015\Projects\Project15\Project15\Assets\11.png">
+      <PackagePath>Assets\11.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Visual Studio 2015\Projects\Project15\Project15\Assets\12.png">
+      <PackagePath>Assets\12.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Visual Studio 2015\Projects\Project15\Project15\Assets\13.png">
+      <PackagePath>Assets\13.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Visual Studio 2015\Projects\Project15\Project15\Assets\14.png">
+      <PackagePath>Assets\14.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Visual Studio 2015\Projects\Project15\Project15\Assets\15.png">
+      <PackagePath>Assets\15.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Visual Studio 2015\Projects\Project15\Project15\Assets\2.png">
+      <PackagePath>Assets\2.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Visual Studio 2015\Projects\Project15\Project15\Assets\3.png">
+      <PackagePath>Assets\3.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Visual Studio 2015\Projects\Project15\Project15\Assets\4.png">
+      <PackagePath>Assets\4.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Visual Studio 2015\Projects\Project15\Project15\Assets\5.png">
+      <PackagePath>Assets\5.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Visual Studio 2015\Projects\Project15\Project15\Assets\6.png">
+      <PackagePath>Assets\6.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Visual Studio 2015\Projects\Project15\Project15\Assets\7.png">
+      <PackagePath>Assets\7.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Visual Studio 2015\Projects\Project15\Project15\Assets\8.png">
+      <PackagePath>Assets\8.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Visual Studio 2015\Projects\Project15\Project15\Assets\9.png">
+      <PackagePath>Assets\9.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Visual Studio 2015\Projects\Project15\Project15\Assets\Logo.scale-100.png">
+      <PackagePath>Assets\Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Visual Studio 2015\Projects\Project15\Project15\Assets\SmallLogo.scale-100.png">
+      <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Visual Studio 2015\Projects\Project15\Project15\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Visual Studio 2015\Projects\Project15\Project15\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Visual Studio 2015\Projects\Project15\Project15\bin\Debug\Project15.xr.xml">
+      <PackagePath>Project15.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Visual Studio 2015\Projects\Project15\Project15\bin\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Visual Studio 2015\Projects\Project15\Project15\bin\Debug\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Visual Studio 2015\Projects\Project15\Project15\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>
