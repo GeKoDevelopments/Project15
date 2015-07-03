@@ -24,5 +24,6 @@
         <Image x:Name="image14" HorizontalAlignment="Left" Height="100" Margin="557,551,0,0" VerticalAlignment="Top" Width="100" Source="Assets/14.png" Tapped="move"/>
         <Image x:Name="image15" HorizontalAlignment="Left" Height="100" Margin="707,551,0,0" VerticalAlignment="Top" Width="100" Source="Assets/15.png" Tapped="move"/>
         <Image x:Name="image16" HorizontalAlignment="Left" Height="100" Margin="857,551,0,0" VerticalAlignment="Top" Width="100" Tapped="move"/>
+        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="99,101,0,0" VerticalAlignment="Top" Height="53" Width="120"/>
     </Grid>
 </Page>
