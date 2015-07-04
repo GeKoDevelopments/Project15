@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>HOME</Machine>
+    <WindowsUser>Κωνσταντίνος</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>f2ff5e1d-bca8-4cb9-8e31-ed2d0a47505b</PackageIdentityName>
+    <IntermediateOutputPath>C:\Users\Κωνσταντίνος\Desktop\Project15\Game15\obj\Debug\</IntermediateOutputPath>
+    <RegisteredManifestChecksum>C32599C5A1F6F431E088838BA1A4B3F222F368DACAF764639C7BECEF9C3DD326</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>f2ff5e1d-bca8-4cb9-8e31-ed2d0a47505b_1.0.0.0_neutral__3d2n3x3q93pwe</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>f2ff5e1d-bca8-4cb9-8e31-ed2d0a47505b_3d2n3x3q93pwe!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>f2ff5e1d-bca8-4cb9-8e31-ed2d0a47505b</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=Κωνσταντίνος</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+    <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\Κωνσταντίνος\Desktop\Project15\Game15\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-07-04T01:33:48.291</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\Κωνσταντίνος\Desktop\Project15\Game15\bin\Debug\Game15.exe">
+      <PackagePath>Game15.exe</PackagePath>
+      <Modified>2015-07-04T01:33:48.134</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Κωνσταντίνος\Desktop\Project15\Game15\Assets\Logo.scale-100.png">
+      <PackagePath>Assets\Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-04-02T14:59:48.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Κωνσταντίνος\Desktop\Project15\Game15\Assets\SmallLogo.scale-100.png">
+      <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-04-02T14:59:48.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Κωνσταντίνος\Desktop\Project15\Game15\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-04-02T14:59:48.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Κωνσταντίνος\Desktop\Project15\Game15\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-04-02T14:59:48.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Κωνσταντίνος\Desktop\Project15\Game15\Icons\1.png">
+      <PackagePath>Icons\1.png</PackagePath>
+      <Modified>2015-07-04T01:30:04.544</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Κωνσταντίνος\Desktop\Project15\Game15\Icons\10.png">
+      <PackagePath>Icons\10.png</PackagePath>
+      <Modified>2015-07-04T01:30:04.634</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Κωνσταντίνος\Desktop\Project15\Game15\Icons\11.png">
+      <PackagePath>Icons\11.png</PackagePath>
+      <Modified>2015-07-04T01:30:04.686</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Κωνσταντίνος\Desktop\Project15\Game15\Icons\12.png">
+      <PackagePath>Icons\12.png</PackagePath>
+      <Modified>2015-07-04T01:30:04.524</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Κωνσταντίνος\Desktop\Project15\Game15\Icons\13.png">
+      <PackagePath>Icons\13.png</PackagePath>
+      <Modified>2015-07-04T01:30:04.592</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Κωνσταντίνος\Desktop\Project15\Game15\Icons\14.png">
+      <PackagePath>Icons\14.png</PackagePath>
+      <Modified>2015-07-04T01:30:04.646</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Κωνσταντίνος\Desktop\Project15\Game15\Icons\15.png">
+      <PackagePath>Icons\15.png</PackagePath>
+      <Modified>2015-07-04T01:30:04.704</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Κωνσταντίνος\Desktop\Project15\Game15\Icons\2.png">
+      <PackagePath>Icons\2.png</PackagePath>
+      <Modified>2015-07-04T01:30:04.604</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Κωνσταντίνος\Desktop\Project15\Game15\Icons\3.png">
+      <PackagePath>Icons\3.png</PackagePath>
+      <Modified>2015-07-04T01:30:04.653</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Κωνσταντίνος\Desktop\Project15\Game15\Icons\4.png">
+      <PackagePath>Icons\4.png</PackagePath>
+      <Modified>2015-07-04T01:30:04.489</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Κωνσταντίνος\Desktop\Project15\Game15\Icons\5.png">
+      <PackagePath>Icons\5.png</PackagePath>
+      <Modified>2015-07-04T01:30:04.560</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Κωνσταντίνος\Desktop\Project15\Game15\Icons\6.png">
+      <PackagePath>Icons\6.png</PackagePath>
+      <Modified>2015-07-04T01:30:04.621</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Κωνσταντίνος\Desktop\Project15\Game15\Icons\7.png">
+      <PackagePath>Icons\7.png</PackagePath>
+      <Modified>2015-07-04T01:30:04.670</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Κωνσταντίνος\Desktop\Project15\Game15\Icons\8.png">
+      <PackagePath>Icons\8.png</PackagePath>
+      <Modified>2015-07-04T01:30:04.509</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Κωνσταντίνος\Desktop\Project15\Game15\Icons\9.png">
+      <PackagePath>Icons\9.png</PackagePath>
+      <Modified>2015-07-04T01:30:04.581</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Κωνσταντίνος\Desktop\Project15\Game15\bin\Debug\Game15.xr.xml">
+      <PackagePath>Game15.xr.xml</PackagePath>
+      <Modified>2015-07-04T01:33:48.051</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Κωνσταντίνος\Desktop\Project15\Game15\bin\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+      <Modified>2015-07-04T01:33:48.063</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Κωνσταντίνος\Desktop\Project15\Game15\bin\Debug\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+      <Modified>2015-07-04T01:33:48.065</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Κωνσταντίνος\Desktop\Project15\Game15\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2015-07-04T01:33:48.204</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>
