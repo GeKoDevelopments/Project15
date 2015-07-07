@@ -7,89 +7,44 @@
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
     <PackageIdentityName>f2ff5e1d-bca8-4cb9-8e31-ed2d0a47505b</PackageIdentityName>
-    <IntermediateOutputPath>C:\Users\Κωνσταντίνος\Desktop\Project15\Game15\obj\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Κωνσταντίνος\Documents\GitHub\Project15\Game15\obj\Debug\</IntermediateOutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\Κωνσταντίνος\Desktop\Project15\Game15\bin\Debug\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Κωνσταντίνος\Documents\GitHub\Project15\Game15\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\Κωνσταντίνος\Desktop\Project15\Game15\bin\Debug\Game15.exe">
+    <AppxPackagedFile Include="C:\Users\Κωνσταντίνος\Documents\GitHub\Project15\Game15\bin\Debug\Game15.exe">
       <PackagePath>Game15.exe</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Κωνσταντίνος\Desktop\Project15\Game15\Assets\Logo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Κωνσταντίνος\Documents\GitHub\Project15\Game15\Assets\Logo.scale-100.png">
       <PackagePath>Assets\Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Κωνσταντίνος\Desktop\Project15\Game15\Assets\SmallLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Κωνσταντίνος\Documents\GitHub\Project15\Game15\Assets\SmallLogo.scale-100.png">
       <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Κωνσταντίνος\Desktop\Project15\Game15\Assets\SplashScreen.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Κωνσταντίνος\Documents\GitHub\Project15\Game15\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Κωνσταντίνος\Desktop\Project15\Game15\Assets\StoreLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Κωνσταντίνος\Documents\GitHub\Project15\Game15\Assets\StoreLogo.scale-100.png">
       <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Κωνσταντίνος\Desktop\Project15\Game15\Icons\1.png">
-      <PackagePath>Icons\1.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Κωνσταντίνος\Desktop\Project15\Game15\Icons\10.png">
-      <PackagePath>Icons\10.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Κωνσταντίνος\Desktop\Project15\Game15\Icons\11.png">
-      <PackagePath>Icons\11.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Κωνσταντίνος\Desktop\Project15\Game15\Icons\12.png">
-      <PackagePath>Icons\12.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Κωνσταντίνος\Desktop\Project15\Game15\Icons\13.png">
-      <PackagePath>Icons\13.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Κωνσταντίνος\Desktop\Project15\Game15\Icons\14.png">
-      <PackagePath>Icons\14.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Κωνσταντίνος\Desktop\Project15\Game15\Icons\15.png">
-      <PackagePath>Icons\15.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Κωνσταντίνος\Desktop\Project15\Game15\Icons\2.png">
-      <PackagePath>Icons\2.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Κωνσταντίνος\Desktop\Project15\Game15\Icons\3.png">
-      <PackagePath>Icons\3.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Κωνσταντίνος\Desktop\Project15\Game15\Icons\4.png">
-      <PackagePath>Icons\4.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Κωνσταντίνος\Desktop\Project15\Game15\Icons\5.png">
-      <PackagePath>Icons\5.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Κωνσταντίνος\Desktop\Project15\Game15\Icons\6.png">
-      <PackagePath>Icons\6.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Κωνσταντίνος\Desktop\Project15\Game15\Icons\7.png">
-      <PackagePath>Icons\7.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Κωνσταντίνος\Desktop\Project15\Game15\Icons\8.png">
-      <PackagePath>Icons\8.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Κωνσταντίνος\Desktop\Project15\Game15\Icons\9.png">
-      <PackagePath>Icons\9.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Κωνσταντίνος\Desktop\Project15\Game15\bin\Debug\Game15.xr.xml">
+    <AppxPackagedFile Include="C:\Users\Κωνσταντίνος\Documents\GitHub\Project15\Game15\bin\Debug\Game15.xr.xml">
       <PackagePath>Game15.xr.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Κωνσταντίνος\Desktop\Project15\Game15\bin\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\Κωνσταντίνος\Documents\GitHub\Project15\Game15\bin\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Κωνσταντίνος\Desktop\Project15\Game15\bin\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\Κωνσταντίνος\Documents\GitHub\Project15\Game15\bin\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Κωνσταντίνος\Desktop\Project15\Game15\bin\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Κωνσταντίνος\Documents\GitHub\Project15\Game15\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>

@@ -1,1 +1,1 @@
-C:\Users\Κωνσταντίνος\Desktop\Project15\Game15\Game15.csproj;neutral
+C:\Users\Κωνσταντίνος\Documents\GitHub\Project15\Game15\Game15.csproj;neutral

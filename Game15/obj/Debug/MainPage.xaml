@@ -8,24 +8,97 @@
     mc:Ignorable="d">
 
     <Grid Background="#FFFFEFD4">
-        <Image x:ConnectionId='1' x:Name="image1" HorizontalAlignment="Left" Height="100" Margin="407,101,0,0" VerticalAlignment="Top" Width="100" Source="Icons/1.png"              />
-        <Image x:ConnectionId='2' x:Name="image2" HorizontalAlignment="Left" Height="100" Margin="557,101,0,0" VerticalAlignment="Top" Width="100" Source="Icons/2.png"              />
-        <Image x:ConnectionId='3' x:Name="image3" HorizontalAlignment="Left" Height="100" Margin="707,101,0,0" VerticalAlignment="Top" Width="100" Source="Icons/3.png"              />
-        <Image x:ConnectionId='4' x:Name="image4" HorizontalAlignment="Left" Height="100" Margin="857,101,0,0" VerticalAlignment="Top" Width="100" Source="Icons/4.png"              />
-        <Image x:ConnectionId='5' x:Name="image5" HorizontalAlignment="Left" Height="100" Margin="407,251,0,0" VerticalAlignment="Top" Width="100" Source="Icons/5.png"              />
-        <Image x:ConnectionId='6' x:Name="image6" HorizontalAlignment="Left" Height="100" Margin="557,251,0,0" VerticalAlignment="Top" Width="100" Source="Icons/6.png"              />
-        <Image x:ConnectionId='7' x:Name="image7" HorizontalAlignment="Left" Height="100" Margin="707,251,0,0" VerticalAlignment="Top" Width="100" Source="Icons/7.png"              />
-        <Image x:ConnectionId='8' x:Name="image8" HorizontalAlignment="Left" Height="100" Margin="857,251,0,0" VerticalAlignment="Top" Width="100" Source="Icons/8.png"              />
-        <Image x:ConnectionId='9' x:Name="image9" HorizontalAlignment="Left" Height="100" Margin="407,401,0,0" VerticalAlignment="Top" Width="100" Source="Icons/9.png"              />
-        <Image x:ConnectionId='10' x:Name="image10" HorizontalAlignment="Left" Height="100" Margin="557,401,0,0" VerticalAlignment="Top" Width="100" Source="Icons/10.png"              />
-        <Image x:ConnectionId='11' x:Name="image11" HorizontalAlignment="Left" Height="100" Margin="707,401,0,0" VerticalAlignment="Top" Width="100" Source="Icons/11.png"              />
-        <Image x:ConnectionId='12' x:Name="image12" HorizontalAlignment="Left" Height="100" Margin="857,401,0,0" VerticalAlignment="Top" Width="100" Source="Icons/12.png"              />
-        <Image x:ConnectionId='13' x:Name="image13" HorizontalAlignment="Left" Height="100" Margin="407,551,0,0" VerticalAlignment="Top" Width="100" Source="Icons/13.png"              />
-        <Image x:ConnectionId='14' x:Name="image14" HorizontalAlignment="Left" Height="100" Margin="557,551,0,0" VerticalAlignment="Top" Width="100" Source="Icons/14.png"              />
-        <Image x:ConnectionId='15' x:Name="image15" HorizontalAlignment="Left" Height="100" Margin="707,551,0,0" VerticalAlignment="Top" Width="100" Source="Icons/15.png"              />
-        <Image x:ConnectionId='16' x:Name="image16" HorizontalAlignment="Left" Height="100" Margin="857,551,0,0" VerticalAlignment="Top" Width="100"              />
-        <Button x:ConnectionId='17' x:Name="button" Content="Shuffle" HorizontalAlignment="Left" Margin="108,98,0,0" VerticalAlignment="Top" Height="53" Width="120" Background="#FFFF8C8C"                />
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="1040,101,0,0" TextWrapping="Wrap" Text="Clicks: 0" VerticalAlignment="Top" FontSize="32" Foreground="Black"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="255*"/>
+            <ColumnDefinition Width="856*"/>
+            <ColumnDefinition Width="255*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid x:Name="left" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="0">
+            <Button x:ConnectionId='17' x:Name="button" Content="Shuffle" Height="53" Width="120" Background="#FFFF8C8C"                 Margin="0,-223,0,223"/>
+        </Grid>
+        <Grid x:Name="right" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="2">
+            <TextBlock x:Name="textBlock" Text="Clicks: 0" FontSize="32" Foreground="Black" Margin="0,-223,0,223"/>
+        </Grid>
+        <Grid x:Name="center" VerticalAlignment="Center" HorizontalAlignment="Center" Background="{x:Null}" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid x:ConnectionId='1' x:Name="gr1" Margin="25" Grid.Row="0" Grid.Column="0"              >
+                <Rectangle Height="100" Width="100" Fill="#FFFFC864"/>
+                <TextBlock Height="50" Width="100" Foreground="Black" FontSize="48" TextAlignment="Center" Text="1"/>
+            </Grid>
+            <Grid x:ConnectionId='2' x:Name="gr2" Margin="25" Grid.Row="0" Grid.Column="1"              >
+                <Rectangle Height="100" Width="100" Fill="#FFFFC864"/>
+                <TextBlock Height="50" Width="100" Foreground="Black" FontSize="48" TextAlignment="Center" Text="2"/>
+            </Grid>
+            <Grid x:ConnectionId='3' x:Name="gr3" Margin="25" Grid.Row="0" Grid.Column="2"              >
+                <Rectangle Height="100" Width="100" Fill="#FFFFC864"/>
+                <TextBlock Height="50" Width="100" Foreground="Black" FontSize="48" TextAlignment="Center" Text="3"/>
+            </Grid>
+            <Grid x:ConnectionId='4' x:Name="gr4" Margin="25" Grid.Row="0" Grid.Column="3"              >
+                <Rectangle Height="100" Width="100" Fill="#FFFFC864"/>
+                <TextBlock Height="50" Width="100" Foreground="Black" FontSize="48" TextAlignment="Center" Text="4"/>
+            </Grid>
+            <Grid x:ConnectionId='5' x:Name="gr5" Margin="25" Grid.Row="1" Grid.Column="0"              >
+                <Rectangle Height="100" Width="100" Fill="#FFFFC864"/>
+                <TextBlock Height="50" Width="100" Foreground="Black" FontSize="48" TextAlignment="Center" Text="5"/>
+            </Grid>
+            <Grid x:ConnectionId='6' x:Name="gr6" Margin="25" Grid.Row="1" Grid.Column="1"              >
+                <Rectangle Height="100" Width="100" Fill="#FFFFC864"/>
+                <TextBlock Height="50" Width="100" Foreground="Black" FontSize="48" TextAlignment="Center" Text="6"/>
+            </Grid>
+            <Grid x:ConnectionId='7' x:Name="gr7" Margin="25" Grid.Row="1" Grid.Column="2"              >
+                <Rectangle Height="100" Width="100" Fill="#FFFFC864"/>
+                <TextBlock Height="50" Width="100" Foreground="Black" FontSize="48" TextAlignment="Center" Text="7"/>
+            </Grid>
+            <Grid x:ConnectionId='8' x:Name="gr8" Margin="25" Grid.Row="1" Grid.Column="3"              >
+                <Rectangle Height="100" Width="100" Fill="#FFFFC864"/>
+                <TextBlock Height="50" Width="100" Foreground="Black" FontSize="48" TextAlignment="Center" Text="8"/>
+            </Grid>
+            <Grid x:ConnectionId='9' x:Name="gr9" Margin="25" Grid.Row="2" Grid.Column="0"              >
+                <Rectangle Height="100" Width="100" Fill="#FFFFC864"/>
+                <TextBlock Height="50" Width="100" Foreground="Black" FontSize="48" TextAlignment="Center" Text="9"/>
+            </Grid>
+            <Grid x:ConnectionId='10' x:Name="gr10" Margin="25" Grid.Row="2" Grid.Column="1"              >
+                <Rectangle Height="100" Width="100" Fill="#FFFFC864"/>
+                <TextBlock Height="50" Width="100" Foreground="Black" FontSize="48" TextAlignment="Center" Text="10"/>
+            </Grid>
+            <Grid x:ConnectionId='11' x:Name="gr11" Margin="25" Grid.Row="2" Grid.Column="2"              >
+                <Rectangle Height="100" Width="100" Fill="#FFFFC864"/>
+                <TextBlock Height="50" Width="100" Foreground="Black" FontSize="48" TextAlignment="Center" Text="11"/>
+            </Grid>
+            <Grid x:ConnectionId='12' x:Name="gr12" Margin="25" Grid.Row="2" Grid.Column="3"              >
+                <Rectangle Height="100" Width="100" Fill="#FFFFC864"/>
+                <TextBlock Height="50" Width="100" Foreground="Black" FontSize="48" TextAlignment="Center" Text="12"/>
+            </Grid>
+            <Grid x:ConnectionId='13' x:Name="gr13" Margin="25" Grid.Row="3" Grid.Column="0"              >
+                <Rectangle Height="100" Width="100" Fill="#FFFFC864"/>
+                <TextBlock Height="50" Width="100" Foreground="Black" FontSize="48" TextAlignment="Center" Text="13"/>
+            </Grid>
+            <Grid x:ConnectionId='14' x:Name="gr14" Margin="25" Grid.Row="3" Grid.Column="1"              >
+                <Rectangle Height="100" Width="100" Fill="#FFFFC864"/>
+                <TextBlock Height="50" Width="100" Foreground="Black" FontSize="48" TextAlignment="Center" Text="14"/>
+            </Grid>
+            <Grid x:ConnectionId='15' x:Name="gr15" Margin="25" Grid.Row="3" Grid.Column="2"              >
+                <Rectangle Height="100" Width="100" Fill="#FFFFC864"/>
+                <TextBlock Height="50" Width="100" Foreground="Black" FontSize="48" TextAlignment="Center" Text="15"/>
+            </Grid>
+            <Grid x:ConnectionId='16' x:Name="gr16" Margin="25" Grid.Row="3" Grid.Column="3"              >
+                <Rectangle Height="100" Width="100" Fill="#FFFFC864" Visibility="Collapsed"/>
+                <TextBlock Height="50" Width="100" Foreground="Black" FontSize="48" TextAlignment="Center"/>
+            </Grid>
+        </Grid>
     </Grid>
 </Page>
 
