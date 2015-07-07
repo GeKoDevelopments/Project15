@@ -5,11 +5,11 @@
     <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{540ADF9F-E654-4F3F-BAF2-87DA4390BD2E}</ProjectGuid>
+    <ProjectGuid>{C2049A11-0E90-4A79-A93D-30A934D38949}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Game15</RootNamespace>
-    <AssemblyName>Game15</AssemblyName>
+    <RootNamespace>Find4</RootNamespace>
+    <AssemblyName>Find4</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -35,14 +35,14 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .NET Framework is automatically included -->
-    <Page Include="Game15Page.xaml">
+    <Page Include="Find4Page.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Game15Page.xaml.cs">
-      <DependentUpon>Game15Page.xaml</DependentUpon>
+    <Compile Include="Find4Page.xaml.cs">
+      <DependentUpon>Find4Page.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

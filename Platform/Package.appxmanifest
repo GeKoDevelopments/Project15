@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
 
-  <Identity Name="f2ff5e1d-bca8-4cb9-8e31-ed2d0a47505b"
+  <Identity Name="9a3b0c12-92da-46fd-9fc6-bd3bffd73be8"
             Publisher="CN=Κωνσταντίνος"
             Version="1.0.0.0" />
 
   <Properties>
-    <DisplayName>Game15</DisplayName>
+    <DisplayName>Platform</DisplayName>
     <PublisherDisplayName>Κωνσταντίνος</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
@@ -23,12 +23,12 @@
   <Applications>
     <Application Id="App"
         Executable="$targetnametoken$.exe"
-        EntryPoint="Game15.App">
+        EntryPoint="Platform.App">
         <m2:VisualElements
-            DisplayName="Game15"
+            DisplayName="Platform"
             Square150x150Logo="Assets\Logo.png"
             Square30x30Logo="Assets\SmallLogo.png"
-            Description="Game15"
+            Description="Platform"
             ForegroundText="light"
             BackgroundColor="#464646">
             <m2:SplashScreen Image="Assets\SplashScreen.png" />

@@ -17,7 +17,7 @@ using Windows.UI.Xaml.Navigation;
 
 // The Blank Application template is documented at http://go.microsoft.com/fwlink/?LinkId=234227
 
-namespace Game15
+namespace Platform
 {
     /// <summary>
     /// Provides application-specific behavior to supplement the default Application class.

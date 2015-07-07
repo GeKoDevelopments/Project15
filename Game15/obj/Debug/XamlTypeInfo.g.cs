@@ -9,9 +9,10 @@
 
 
 
-namespace Game15
+namespace Game15.Game15_XamlTypeInfo
 {
-    public partial class App : global::Windows.UI.Xaml.Markup.IXamlMetadataProvider
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks","4.0.0.0")]
+    public sealed class XamlMetaDataProvider: global::Windows.UI.Xaml.Markup.IXamlMetadataProvider
     {
         private global::Game15.Game15_XamlTypeInfo.XamlTypeInfoProvider _provider;
 
@@ -125,12 +126,12 @@ namespace Game15.Game15_XamlTypeInfo
         private void InitTypeTables()
         {
             _typeNameTable = new string[3];
-            _typeNameTable[0] = "Game15.MainPage";
+            _typeNameTable[0] = "Game15.Game15Page";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
 
             _typeTable = new global::System.Type[3];
-            _typeTable[0] = typeof(global::Game15.MainPage);
+            _typeTable[0] = typeof(global::Game15.Game15Page);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
         }
@@ -167,7 +168,7 @@ namespace Game15.Game15_XamlTypeInfo
             return -1;
         }
 
-        private object Activate_0_MainPage() { return new global::Game15.MainPage(); }
+        private object Activate_0_Game15Page() { return new global::Game15.Game15Page(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -179,9 +180,9 @@ namespace Game15.Game15_XamlTypeInfo
             switch (typeIndex)
             {
 
-            case 0:   //  Game15.MainPage
+            case 0:   //  Game15.Game15Page
                 userType = new global::Game15.Game15_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_0_MainPage;
+                userType.Activator = Activate_0_Game15Page;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;

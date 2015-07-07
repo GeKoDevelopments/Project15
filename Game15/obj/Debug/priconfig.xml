@@ -26,8 +26,8 @@
       <qualifier name="Configuration" value="" />
       <qualifier name="AlternateForm" value="" />
     </default>
-    <indexer-config type="RESW" convertDotsToSlashes="true" />
-    <indexer-config type="RESJSON" />
+    <indexer-config type="RESW" convertDotsToSlashes="true" initialPath="Game15" />
+    <indexer-config type="RESJSON" initialPath="Game15" />
     <indexer-config type="RESFILES" qualifierDelimiter="." />
   </index>
   <index root="\" startIndexAt="obj\Debug\pri.resfiles">
