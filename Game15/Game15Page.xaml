@@ -14,13 +14,13 @@
             <ColumnDefinition Width="255*"/>
         </Grid.ColumnDefinitions>
 
-        <Grid x:Name="left" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="0">
+        <Grid VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="0">
             <Button x:Name="button" Content="Shuffle" Height="53" Width="120" Background="#FFFF8C8C" Click="Shuffle" Margin="0,-223,0,223"/>
         </Grid>
-        <Grid x:Name="right" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="2">
+        <Grid VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="2">
             <TextBlock x:Name="textBlock" Text="Clicks: 0" FontSize="32" Foreground="Black" Margin="0,-223,0,223"/>
         </Grid>
-        <Grid x:Name="center" VerticalAlignment="Center" HorizontalAlignment="Center" Background="{x:Null}" Grid.Column="1">
+        <Grid VerticalAlignment="Center" HorizontalAlignment="Center" Background="{x:Null}" Grid.Column="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
@@ -35,68 +35,68 @@
             </Grid.ColumnDefinitions>
 
             <Grid x:Name="gr1" Margin="25" Grid.Row="0" Grid.Column="0" Tapped="move">
-                <Rectangle Height="100" Width="100" Fill="#FFFFC864"/>
-                <TextBlock Height="50" Width="100" Foreground="Black" FontSize="48" TextAlignment="Center" Text="1"/>
+                <Rectangle x:Name="rec1" Height="100" Width="100" Fill="#FFFFC864"/>
+                <TextBlock x:Name="tex1" Height="50" Width="100" Foreground="Black" FontSize="48" TextAlignment="Center" Text="1"/>
             </Grid>
             <Grid x:Name="gr2" Margin="25" Grid.Row="0" Grid.Column="1" Tapped="move">
-                <Rectangle Height="100" Width="100" Fill="#FFFFC864"/>
-                <TextBlock Height="50" Width="100" Foreground="Black" FontSize="48" TextAlignment="Center" Text="2"/>
+                <Rectangle x:Name="rec2" Height="100" Width="100" Fill="#FFFFC864"/>
+                <TextBlock x:Name="tex2" Height="50" Width="100" Foreground="Black" FontSize="48" TextAlignment="Center" Text="2"/>
             </Grid>
             <Grid x:Name="gr3" Margin="25" Grid.Row="0" Grid.Column="2" Tapped="move">
-                <Rectangle Height="100" Width="100" Fill="#FFFFC864"/>
-                <TextBlock Height="50" Width="100" Foreground="Black" FontSize="48" TextAlignment="Center" Text="3"/>
+                <Rectangle x:Name="rec3" Height="100" Width="100" Fill="#FFFFC864"/>
+                <TextBlock x:Name="tex3" Height="50" Width="100" Foreground="Black" FontSize="48" TextAlignment="Center" Text="3"/>
             </Grid>
             <Grid x:Name="gr4" Margin="25" Grid.Row="0" Grid.Column="3" Tapped="move">
-                <Rectangle Height="100" Width="100" Fill="#FFFFC864"/>
-                <TextBlock Height="50" Width="100" Foreground="Black" FontSize="48" TextAlignment="Center" Text="4"/>
+                <Rectangle x:Name="rec4" Height="100" Width="100" Fill="#FFFFC864"/>
+                <TextBlock x:Name="tex4" Height="50" Width="100" Foreground="Black" FontSize="48" TextAlignment="Center" Text="4"/>
             </Grid>
             <Grid x:Name="gr5" Margin="25" Grid.Row="1" Grid.Column="0" Tapped="move">
-                <Rectangle Height="100" Width="100" Fill="#FFFFC864"/>
-                <TextBlock Height="50" Width="100" Foreground="Black" FontSize="48" TextAlignment="Center" Text="5"/>
+                <Rectangle x:Name="rec5" Height="100" Width="100" Fill="#FFFFC864"/>
+                <TextBlock x:Name="tex5" Height="50" Width="100" Foreground="Black" FontSize="48" TextAlignment="Center" Text="5"/>
             </Grid>
             <Grid x:Name="gr6" Margin="25" Grid.Row="1" Grid.Column="1" Tapped="move">
-                <Rectangle Height="100" Width="100" Fill="#FFFFC864"/>
-                <TextBlock Height="50" Width="100" Foreground="Black" FontSize="48" TextAlignment="Center" Text="6"/>
+                <Rectangle x:Name="rec6" Height="100" Width="100" Fill="#FFFFC864"/>
+                <TextBlock x:Name="tex6" Height="50" Width="100" Foreground="Black" FontSize="48" TextAlignment="Center" Text="6"/>
             </Grid>
             <Grid x:Name="gr7" Margin="25" Grid.Row="1" Grid.Column="2" Tapped="move">
-                <Rectangle Height="100" Width="100" Fill="#FFFFC864"/>
-                <TextBlock Height="50" Width="100" Foreground="Black" FontSize="48" TextAlignment="Center" Text="7"/>
+                <Rectangle x:Name="rec7" Height="100" Width="100" Fill="#FFFFC864"/>
+                <TextBlock x:Name="tex7" Height="50" Width="100" Foreground="Black" FontSize="48" TextAlignment="Center" Text="7"/>
             </Grid>
             <Grid x:Name="gr8" Margin="25" Grid.Row="1" Grid.Column="3" Tapped="move">
-                <Rectangle Height="100" Width="100" Fill="#FFFFC864"/>
-                <TextBlock Height="50" Width="100" Foreground="Black" FontSize="48" TextAlignment="Center" Text="8"/>
+                <Rectangle x:Name="rec8" Height="100" Width="100" Fill="#FFFFC864"/>
+                <TextBlock x:Name="tex8" Height="50" Width="100" Foreground="Black" FontSize="48" TextAlignment="Center" Text="8"/>
             </Grid>
             <Grid x:Name="gr9" Margin="25" Grid.Row="2" Grid.Column="0" Tapped="move">
-                <Rectangle Height="100" Width="100" Fill="#FFFFC864"/>
-                <TextBlock Height="50" Width="100" Foreground="Black" FontSize="48" TextAlignment="Center" Text="9"/>
+                <Rectangle x:Name="rec9" Height="100" Width="100" Fill="#FFFFC864"/>
+                <TextBlock x:Name="tex9" Height="50" Width="100" Foreground="Black" FontSize="48" TextAlignment="Center" Text="9"/>
             </Grid>
             <Grid x:Name="gr10" Margin="25" Grid.Row="2" Grid.Column="1" Tapped="move">
-                <Rectangle Height="100" Width="100" Fill="#FFFFC864"/>
-                <TextBlock Height="50" Width="100" Foreground="Black" FontSize="48" TextAlignment="Center" Text="10"/>
+                <Rectangle x:Name="rec10" Height="100" Width="100" Fill="#FFFFC864"/>
+                <TextBlock x:Name="tex10" Height="50" Width="100" Foreground="Black" FontSize="48" TextAlignment="Center" Text="10"/>
             </Grid>
             <Grid x:Name="gr11" Margin="25" Grid.Row="2" Grid.Column="2" Tapped="move">
-                <Rectangle Height="100" Width="100" Fill="#FFFFC864"/>
-                <TextBlock Height="50" Width="100" Foreground="Black" FontSize="48" TextAlignment="Center" Text="11"/>
+                <Rectangle x:Name="rec11" Height="100" Width="100" Fill="#FFFFC864"/>
+                <TextBlock x:Name="tex11" Height="50" Width="100" Foreground="Black" FontSize="48" TextAlignment="Center" Text="11"/>
             </Grid>
             <Grid x:Name="gr12" Margin="25" Grid.Row="2" Grid.Column="3" Tapped="move">
-                <Rectangle Height="100" Width="100" Fill="#FFFFC864"/>
-                <TextBlock Height="50" Width="100" Foreground="Black" FontSize="48" TextAlignment="Center" Text="12"/>
+                <Rectangle x:Name="rec12" Height="100" Width="100" Fill="#FFFFC864"/>
+                <TextBlock x:Name="tex12" Height="50" Width="100" Foreground="Black" FontSize="48" TextAlignment="Center" Text="12"/>
             </Grid>
             <Grid x:Name="gr13" Margin="25" Grid.Row="3" Grid.Column="0" Tapped="move">
-                <Rectangle Height="100" Width="100" Fill="#FFFFC864"/>
-                <TextBlock Height="50" Width="100" Foreground="Black" FontSize="48" TextAlignment="Center" Text="13"/>
+                <Rectangle x:Name="rec13" Height="100" Width="100" Fill="#FFFFC864"/>
+                <TextBlock x:Name="tex13" Height="50" Width="100" Foreground="Black" FontSize="48" TextAlignment="Center" Text="13"/>
             </Grid>
             <Grid x:Name="gr14" Margin="25" Grid.Row="3" Grid.Column="1" Tapped="move">
-                <Rectangle Height="100" Width="100" Fill="#FFFFC864"/>
-                <TextBlock Height="50" Width="100" Foreground="Black" FontSize="48" TextAlignment="Center" Text="14"/>
+                <Rectangle x:Name="rec14" Height="100" Width="100" Fill="#FFFFC864"/>
+                <TextBlock x:Name="tex14" Height="50" Width="100" Foreground="Black" FontSize="48" TextAlignment="Center" Text="14"/>
             </Grid>
             <Grid x:Name="gr15" Margin="25" Grid.Row="3" Grid.Column="2" Tapped="move">
-                <Rectangle Height="100" Width="100" Fill="#FFFFC864"/>
-                <TextBlock Height="50" Width="100" Foreground="Black" FontSize="48" TextAlignment="Center" Text="15"/>
+                <Rectangle x:Name="rec15" Height="100" Width="100" Fill="#FFFFC864"/>
+                <TextBlock x:Name="tex15" Height="50" Width="100" Foreground="Black" FontSize="48" TextAlignment="Center" Text="15"/>
             </Grid>
             <Grid x:Name="gr16" Margin="25" Grid.Row="3" Grid.Column="3" Tapped="move">
-                <Rectangle Height="100" Width="100" Fill="#FFFFC864" Visibility="Collapsed"/>
-                <TextBlock Height="50" Width="100" Foreground="Black" FontSize="48" TextAlignment="Center"/>
+                <Rectangle x:Name="rec16" Height="100" Width="100" Fill="#FFFFC864" Visibility="Collapsed"/>
+                <TextBlock x:Name="tex16" Height="50" Width="100" Foreground="Black" FontSize="48" TextAlignment="Center"/>
             </Grid>
         </Grid>
     </Grid>

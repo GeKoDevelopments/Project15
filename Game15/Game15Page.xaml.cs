@@ -70,40 +70,40 @@ namespace Game15
                 panel[i] = new Tile[4];
             }
 
-            panel[0][0] = new Tile(gr1, text[1]);
-            panel[0][1] = new Tile(gr2, text[2]);
-            panel[0][2] = new Tile(gr3, text[3]);
-            panel[0][3] = new Tile(gr4, text[4]);
-            panel[1][0] = new Tile(gr5, text[5]);
-            panel[1][1] = new Tile(gr6, text[6]);
-            panel[1][2] = new Tile(gr7, text[7]);
-            panel[1][3] = new Tile(gr8, text[8]);
-            panel[2][0] = new Tile(gr9, text[9]);
-            panel[2][1] = new Tile(gr10, text[10]);
-            panel[2][2] = new Tile(gr11, text[11]);
-            panel[2][3] = new Tile(gr12, text[12]);
-            panel[3][0] = new Tile(gr13, text[13]);
-            panel[3][1] = new Tile(gr14, text[14]);
-            panel[3][2] = new Tile(gr15, text[15]);
-            panel[3][3] = new Tile(gr16, text[0]);
+            panel[0][0] = new Tile(gr1, rec1, tex1, text[1]);
+            panel[0][1] = new Tile(gr2, rec2, tex2, text[2]);
+            panel[0][2] = new Tile(gr3, rec3, tex3, text[3]);
+            panel[0][3] = new Tile(gr4, rec4, tex4, text[4]);
+            panel[1][0] = new Tile(gr5, rec5, tex5, text[5]);
+            panel[1][1] = new Tile(gr6, rec6, tex6, text[6]);
+            panel[1][2] = new Tile(gr7, rec7, tex7, text[7]);
+            panel[1][3] = new Tile(gr8, rec8, tex8, text[8]);
+            panel[2][0] = new Tile(gr9, rec9, tex9, text[9]);
+            panel[2][1] = new Tile(gr10, rec10, tex10, text[10]);
+            panel[2][2] = new Tile(gr11, rec11, tex11, text[11]);
+            panel[2][3] = new Tile(gr12, rec12, tex12, text[12]);
+            panel[3][0] = new Tile(gr13, rec13, tex13, text[13]);
+            panel[3][1] = new Tile(gr14, rec14, tex14, text[14]);
+            panel[3][2] = new Tile(gr15, rec15, tex15, text[15]);
+            panel[3][3] = new Tile(gr16, rec16, tex16, text[0]);
         }
 
         void swap_empty(Point a)
         {
-            string temp = panel[a.X][a.Y].t;
-            panel[a.X][a.Y].t = panel[empty.X][empty.Y].t;
-            panel[empty.X][empty.Y].t = temp;
+            string temp = panel[a.X][a.Y].get_text();
+            panel[a.X][a.Y].set_text(panel[empty.X][empty.Y].get_text());
+            panel[empty.X][empty.Y].set_text(temp);
             empty = a;
         }
 
         private void move(object sender, TappedRoutedEventArgs e)
         {
-            ((Rectangle)panel[empty.X][empty.Y].n.Children[0]).Visibility = Visibility.Visible;
+            panel[empty.X][empty.Y].set_visible(true);
             Grid gr = (Grid)sender;
             Point pos = null;
             for (int i = 0; i < 4; i++)
                 for (int j = 0; j < 4; j++)
-                    if (panel[i][j].check_text(gr))
+                    if (panel[i][j].g == gr)
                         pos = new Point(i, j);
 
             if (pos.X == empty.X)
@@ -136,27 +136,10 @@ namespace Game15
             counter++;
             textBlock.Text = "Clicks: " + counter;
 
-            ((TextBlock)gr1.Children[1]).Text = panel[0][0].t;
-            ((TextBlock)gr2.Children[1]).Text = panel[0][1].t;
-            ((TextBlock)gr3.Children[1]).Text = panel[0][2].t;
-            ((TextBlock)gr4.Children[1]).Text = panel[0][3].t;
-            ((TextBlock)gr5.Children[1]).Text = panel[1][0].t;
-            ((TextBlock)gr6.Children[1]).Text = panel[1][1].t;
-            ((TextBlock)gr7.Children[1]).Text = panel[1][2].t;
-            ((TextBlock)gr8.Children[1]).Text = panel[1][3].t;
-            ((TextBlock)gr9.Children[1]).Text = panel[2][0].t;
-            ((TextBlock)gr10.Children[1]).Text = panel[2][1].t;
-            ((TextBlock)gr11.Children[1]).Text = panel[2][2].t;
-            ((TextBlock)gr12.Children[1]).Text = panel[2][3].t;
-            ((TextBlock)gr13.Children[1]).Text = panel[3][0].t;
-            ((TextBlock)gr14.Children[1]).Text = panel[3][1].t;
-            ((TextBlock)gr15.Children[1]).Text = panel[3][2].t;
-            ((TextBlock)gr16.Children[1]).Text = panel[3][3].t;
-
             if (check_win() == true)
                 button.Visibility = Visibility.Visible;
 
-            ((Rectangle)panel[empty.X][empty.Y].n.Children[0]).Visibility = Visibility.Collapsed;
+            panel[empty.X][empty.Y].set_visible(false);
         }
 
         private void Shuffle(object sender, RoutedEventArgs e)
@@ -170,24 +153,24 @@ namespace Game15
                     x++;
 
                 y = panel[empty.X][x];
-                move(y.n, null);
+                move(y.g, null);
 
                 x = rnd.Next() % 3;
                 if (x >= empty.Y)
                     x++;
 
                 y = panel[x][empty.Y];
-                move(y.n, null);
+                move(y.g, null);
             }
             if (empty.X != 3)
             {
                 y = panel[3][empty.Y];
-                move(y.n, null);
+                move(y.g, null);
             }
             if (empty.Y != 3)
             {
                 y = panel[empty.X][3];
-                move(y.n, null);
+                move(y.g, null);
             }
             counter = 0;
             textBlock.Text = "Clicks: " + counter;
@@ -195,25 +178,24 @@ namespace Game15
 
         private Boolean check_win()
         {
-            if (((TextBlock)panel[3][3].n.Children[1]).Text != text[0])
+            if (panel[3][3].get_text() != text[0])
                 return false;
 
-            return (
-            ((TextBlock)panel[0][0].n.Children[1]).Text == text[1]
-            && ((TextBlock)panel[0][1].n.Children[1]).Text == text[2]
-            && ((TextBlock)panel[0][2].n.Children[1]).Text == text[3]
-            && ((TextBlock)panel[0][3].n.Children[1]).Text == text[4]
-            && ((TextBlock)panel[1][0].n.Children[1]).Text == text[5]
-            && ((TextBlock)panel[1][1].n.Children[1]).Text == text[6]
-            && ((TextBlock)panel[1][2].n.Children[1]).Text == text[7]
-            && ((TextBlock)panel[1][3].n.Children[1]).Text == text[8]
-            && ((TextBlock)panel[2][0].n.Children[1]).Text == text[9]
-            && ((TextBlock)panel[2][1].n.Children[1]).Text == text[10]
-            && ((TextBlock)panel[2][2].n.Children[1]).Text == text[11]
-            && ((TextBlock)panel[2][3].n.Children[1]).Text == text[12]
-            && ((TextBlock)panel[3][0].n.Children[1]).Text == text[13]
-            && ((TextBlock)panel[3][1].n.Children[1]).Text == text[14]
-            && ((TextBlock)panel[3][2].n.Children[1]).Text == text[15]
+            return (panel[0][0].get_text() == text[1]
+            && panel[0][1].get_text() == text[2]
+            && panel[0][2].get_text() == text[3]
+            && panel[0][3].get_text() == text[4]
+            && panel[1][0].get_text() == text[5]
+            && panel[1][1].get_text() == text[6]
+            && panel[1][2].get_text() == text[7]
+            && panel[1][3].get_text() == text[8]
+            && panel[2][0].get_text() == text[9]
+            && panel[2][1].get_text() == text[10]
+            && panel[2][2].get_text() == text[11]
+            && panel[2][3].get_text() == text[12]
+            && panel[3][0].get_text() == text[13]
+            && panel[3][1].get_text() == text[14]
+            && panel[3][2].get_text() == text[15]
             );
         }
     }
@@ -227,16 +209,30 @@ namespace Game15
 
     public class Tile
     {
-        public Grid n { get; }
-        public string t { get; set; }
-        public Tile(Grid gr, string nu)
+        public Grid g { get; }
+        private Rectangle r;
+        private TextBlock t;
+        public Tile(Grid gr, Rectangle re, TextBlock te, string nu)
         {
-            n = gr;
-            t = nu;
+            g = gr;
+            r = re;
+            t = te;
+            t.Text = nu;
         }
-        public bool check_text(Grid im)
+        public void set_text(string te)
         {
-            return n == im;
+            t.Text = te;
+        }
+        public string get_text()
+        {
+            return t.Text;
+        }
+        public void set_visible(bool b)
+        {
+            if (b)
+                r.Visibility = Visibility.Visible;
+            else
+                r.Visibility = Visibility.Collapsed;
         }
     }
 }
