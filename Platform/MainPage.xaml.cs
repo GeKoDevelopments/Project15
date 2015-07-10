@@ -24,29 +24,27 @@ namespace Platform
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        Dictionary<string, Type> dict;
         public MainPage()
         {
             this.InitializeComponent();
+            initialize();
+        }
+
+        private void initialize()
+        {
+            dict = new Dictionary<string, Type>();
+            dict["Game15"] = typeof(Game15Page);
+            dict["Find4"] = typeof(Find4Page);
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
             Button b = (Button)sender;
             string s = b.Name;
-            switch (s)
+            if (this.Frame != null)
             {
-                case "Game15":
-                    if (this.Frame != null)
-                    {
-                        this.Frame.Navigate(typeof(Game15Page));
-                    }
-                    break;
-                case "Find4":
-                    if (this.Frame != null)
-                    {
-                        this.Frame.Navigate(typeof(Find4Page));
-                    }
-                    break;
+                this.Frame.Navigate(dict[s]);
             }
         }
     }
