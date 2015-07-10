@@ -42,7 +42,7 @@ namespace Find4
             round = 0;
             cur_pos = 0;
             color = new colors();
-            option = new Block(op1,op2,op3,op4);
+            option = new Block(op1, op2, op3, op4);
             panel = new ComboBlock[6];
             panel[0] = new ComboBlock(ans1_1, ans1_2, ans1_3, ans1_4, que1_1, que1_2, que1_3, que1_4);
             panel[1] = new ComboBlock(ans2_1, ans2_2, ans2_3, ans2_4, que2_1, que2_2, que2_3, que2_4);
@@ -71,7 +71,8 @@ namespace Find4
                     panel[round].que[cur_pos].Fill = ellip.Fill;
 
                 }
-                if (check()){
+                if (check())
+                {
                     //win();
                 }
                 cur_pos = 0;
@@ -86,7 +87,7 @@ namespace Find4
 
         private bool check()
         {
-            List<int> listOption = new List<int> {0,1,2,3};
+            List<int> listOption = new List<int> { 0, 1, 2, 3 };
             List<int> listAns = new List<int> { 0, 1, 2, 3 };
             int black = 0, white = 0;
             Color col1, col2;
@@ -95,7 +96,7 @@ namespace Find4
                 var brush1 = option.que[i].Fill as SolidColorBrush;
                 if (brush1 != null)
                     col1 = brush1.Color;
-               var brush2 = panel[round].que[i].Fill as SolidColorBrush;
+                var brush2 = panel[round].que[i].Fill as SolidColorBrush;
                 if (brush2 != null)
                     col2 = brush2.Color;
 
@@ -106,24 +107,25 @@ namespace Find4
                     listAns.Remove(i);
                 }
             }
-                
+
             for (int i = 0; i < listOption.Count; i++)
-            { 
+            {
                 var brush1 = option.que[listOption[i]].Fill as SolidColorBrush;
                 if (brush1 != null)
                     col1 = brush1.Color;
 
-                for (int k = 0; k < listAns.Count; k++) {
-                    var brush2 = panel[round].que[ listAns[k] ].Fill as SolidColorBrush;
+                for (int k = 0; k < listAns.Count; k++)
+                {
+                    var brush2 = panel[round].que[listAns[k]].Fill as SolidColorBrush;
                     if (brush2 != null)
                         col2 = brush2.Color;
                     if (col1 == col2)
-                        {
-                            white++;
-                            listAns.Remove( listAns[k] );
-                            break;
-                        }   
-                }        
+                    {
+                        white++;
+                        listAns.Remove(listAns[k]);
+                        break;
+                    }
+                }
             }
             int j;
             for (j = 0; j < black; j++)
@@ -136,7 +138,7 @@ namespace Find4
                 j++;
             }
 
-            return black==4;
+            return black == 4;
         }
 
 
@@ -155,7 +157,7 @@ namespace Find4
         {
             public Ellipse[] que { get; set; }
             public Block() { }  //////////////////////////////////////////////////
-            public Block(Ellipse q1, Ellipse q2, Ellipse q3, Ellipse q4) 
+            public Block(Ellipse q1, Ellipse q2, Ellipse q3, Ellipse q4)
             {
                 que = new Ellipse[4];
                 que[0] = q1;
@@ -163,7 +165,7 @@ namespace Find4
                 que[2] = q3;
                 que[3] = q4;
                 colors col = new colors();
-                Random rand = new Random();     
+                Random rand = new Random();
                 for (int i = 0; i < 4; i++)
                 {
                     int option = rand.Next(1, 7);
@@ -256,5 +258,16 @@ namespace Find4
                 gray.Color = Windows.UI.Color.FromArgb(255, 128, 128, 128);
             }
         }
+
+      
+          private void Exit_Click(object sender, RoutedEventArgs e)
+        {
+            if (this.Frame != null)
+            {
+                this.Frame.GoBack();
+            }
+        }
+
+    
     }
 }
