@@ -137,7 +137,7 @@ namespace Game15
             textBlock.Text = "Clicks: " + counter;
 
             if (check_win() == true)
-                button.Visibility = Visibility.Visible;
+                shuffle.Visibility = Visibility.Visible;
 
             panel[empty.X][empty.Y].set_visible(false);
         }
@@ -145,7 +145,7 @@ namespace Game15
         private void Shuffle(object sender, RoutedEventArgs e)
         {
             Tile y;
-            button.Visibility = Visibility.Collapsed;
+            shuffle.Visibility = Visibility.Collapsed;
             for (int i = 0; i < difficulty; i++)
             {
                 int x = rnd.Next() % 3;
@@ -197,6 +197,14 @@ namespace Game15
             && panel[3][1].get_text() == text[14]
             && panel[3][2].get_text() == text[15]
             );
+        }
+
+        private void Exit(object sender, RoutedEventArgs e)
+        {
+            if (this.Frame != null)
+            {
+                this.Frame.GoBack();
+            }
         }
     }
 

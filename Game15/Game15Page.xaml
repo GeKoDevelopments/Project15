@@ -9,29 +9,40 @@
 
     <Grid Background="#FFFFEFD4">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="255*"/>
-            <ColumnDefinition Width="856*"/>
-            <ColumnDefinition Width="255*"/>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
 
-        <Grid VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="0">
-            <Button x:Name="button" Content="Shuffle" Height="53" Width="120" Background="#FFFF8C8C" Click="Shuffle" Margin="0,-223,0,223"/>
-        </Grid>
-        <Grid VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="2">
-            <TextBlock x:Name="textBlock" Text="Clicks: 0" FontSize="32" Foreground="Black" Margin="0,-223,0,223"/>
-        </Grid>
-        <Grid VerticalAlignment="Center" HorizontalAlignment="Center" Background="{x:Null}" Grid.Column="1">
+        <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Column="0">
             <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Button x:Name="shuffle" Content="Shuffle" Height="53" Width="120" Background="#FFFF8C8C" Click="Shuffle" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="0"/>
+            <Button x:Name="exit" Content="Exit" Height="53" Width="120" Background="#FF666666" Click="Exit" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="1"/>
+        </Grid>
+        <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <TextBlock x:Name="textBlock" Text="Clicks: 0" FontSize="32" Foreground="Black" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Grid>
+        <Grid VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
             <Grid x:Name="gr1" Margin="25" Grid.Row="0" Grid.Column="0" Tapped="move">
