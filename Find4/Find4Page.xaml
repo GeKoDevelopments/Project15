@@ -36,16 +36,16 @@
                             </ItemsPanelTemplate>
                         </ItemsControl.ItemsPanel>
                         <ItemsControl.Items>
-                            <Ellipse x:Name="ans6_4" Fill="White" HorizontalAlignment="Left" Height="25" Width="25" Stroke="Black" VerticalAlignment="Top"/>
+                            <Ellipse x:Name="ans6_1" Fill="White" HorizontalAlignment="Left" Height="25" Width="25" Stroke="Black" VerticalAlignment="Top"/>
                             <Ellipse x:Name="ans6_3" Fill="White" HorizontalAlignment="Left" Height="25" Width="25" Stroke="Black" VerticalAlignment="Top"/>
                             <Ellipse x:Name="ans6_2" Fill="White" HorizontalAlignment="Left" Height="25" Width="25" Stroke="Black" VerticalAlignment="Top"/>
-                            <Ellipse x:Name="ans6_1" Fill="White" HorizontalAlignment="Left" Height="25" Width="25" Stroke="Black" VerticalAlignment="Top"/>
+                            <Ellipse x:Name="ans6_4" Fill="White" HorizontalAlignment="Left" Height="25" Width="25" Stroke="Black" VerticalAlignment="Top"/>
                         </ItemsControl.Items>
                     </ItemsControl>
-                    <Ellipse x:Name="que6_4" Fill="White" HorizontalAlignment="Left" Height="50" Width="50" Stroke="Black" VerticalAlignment="Top"/>
-                    <Ellipse x:Name="que6_3" Fill="White" HorizontalAlignment="Left" Height="50" Width="50" Stroke="Black" VerticalAlignment="Top"/>
-                    <Ellipse x:Name="que6_2" Fill="White" HorizontalAlignment="Left" Height="50" Width="50" Stroke="Black" VerticalAlignment="Top"/>
                     <Ellipse x:Name="que6_1" Fill="White" HorizontalAlignment="Left" Height="50" Width="50" Stroke="Black" VerticalAlignment="Top"/>
+                    <Ellipse x:Name="que6_2" Fill="White" HorizontalAlignment="Left" Height="50" Width="50" Stroke="Black" VerticalAlignment="Top"/>
+                    <Ellipse x:Name="que6_3" Fill="White" HorizontalAlignment="Left" Height="50" Width="50" Stroke="Black" VerticalAlignment="Top"/>
+                    <Ellipse x:Name="que6_4" Fill="White" HorizontalAlignment="Left" Height="50" Width="50" Stroke="Black" VerticalAlignment="Top"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <ItemsControl>
@@ -55,16 +55,16 @@
                             </ItemsPanelTemplate>
                         </ItemsControl.ItemsPanel>
                         <ItemsControl.Items>
-                            <Ellipse x:Name="ans5_4" Fill="White" HorizontalAlignment="Left" Height="25" Width="25" Stroke="Black" VerticalAlignment="Top"/>
+                            <Ellipse x:Name="ans5_1" Fill="White" HorizontalAlignment="Left" Height="25" Width="25" Stroke="Black" VerticalAlignment="Top"/>
                             <Ellipse x:Name="ans5_3" Fill="White" HorizontalAlignment="Left" Height="25" Width="25" Stroke="Black" VerticalAlignment="Top"/>
                             <Ellipse x:Name="ans5_2" Fill="White" HorizontalAlignment="Left" Height="25" Width="25" Stroke="Black" VerticalAlignment="Top"/>
-                            <Ellipse x:Name="ans5_1" Fill="White" HorizontalAlignment="Left" Height="25" Width="25" Stroke="Black" VerticalAlignment="Top"/>
+                            <Ellipse x:Name="ans5_4" Fill="White" HorizontalAlignment="Left" Height="25" Width="25" Stroke="Black" VerticalAlignment="Top"/>
                         </ItemsControl.Items>
                     </ItemsControl>
-                    <Ellipse x:Name="que5_4" Fill="White" HorizontalAlignment="Left" Height="50" Width="50" Stroke="Black" VerticalAlignment="Top"/>
-                    <Ellipse x:Name="que5_3" Fill="White" HorizontalAlignment="Left" Height="50" Width="50" Stroke="Black" VerticalAlignment="Top"/>
-                    <Ellipse x:Name="que5_2" Fill="White" HorizontalAlignment="Left" Height="50" Width="50" Stroke="Black" VerticalAlignment="Top"/>
                     <Ellipse x:Name="que5_1" Fill="White" HorizontalAlignment="Left" Height="50" Width="50" Stroke="Black" VerticalAlignment="Top"/>
+                    <Ellipse x:Name="que5_2" Fill="White" HorizontalAlignment="Left" Height="50" Width="50" Stroke="Black" VerticalAlignment="Top"/>
+                    <Ellipse x:Name="que5_3" Fill="White" HorizontalAlignment="Left" Height="50" Width="50" Stroke="Black" VerticalAlignment="Top"/>
+                    <Ellipse x:Name="que5_4" Fill="White" HorizontalAlignment="Left" Height="50" Width="50" Stroke="Black" VerticalAlignment="Top"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <ItemsControl>
@@ -74,16 +74,16 @@
                             </ItemsPanelTemplate>
                         </ItemsControl.ItemsPanel>
                         <ItemsControl.Items>
-                            <Ellipse x:Name="ans4_4" Fill="White" HorizontalAlignment="Left" Height="25" Width="25" Stroke="Black" VerticalAlignment="Top"/>
+                            <Ellipse x:Name="ans4_1" Fill="White" HorizontalAlignment="Left" Height="25" Width="25" Stroke="Black" VerticalAlignment="Top"/>
                             <Ellipse x:Name="ans4_3" Fill="White" HorizontalAlignment="Left" Height="25" Width="25" Stroke="Black" VerticalAlignment="Top"/>
                             <Ellipse x:Name="ans4_2" Fill="White" HorizontalAlignment="Left" Height="25" Width="25" Stroke="Black" VerticalAlignment="Top"/>
-                            <Ellipse x:Name="ans4_1" Fill="White" HorizontalAlignment="Left" Height="25" Width="25" Stroke="Black" VerticalAlignment="Top"/>
+                            <Ellipse x:Name="ans4_4" Fill="White" HorizontalAlignment="Left" Height="25" Width="25" Stroke="Black" VerticalAlignment="Top"/>
                         </ItemsControl.Items>
                     </ItemsControl>
-                    <Ellipse x:Name="que4_4" Fill="White" HorizontalAlignment="Left" Height="50" Width="50" Stroke="Black" VerticalAlignment="Top"/>
-                    <Ellipse x:Name="que4_3" Fill="White" HorizontalAlignment="Left" Height="50" Width="50" Stroke="Black" VerticalAlignment="Top"/>
-                    <Ellipse x:Name="que4_2" Fill="White" HorizontalAlignment="Left" Height="50" Width="50" Stroke="Black" VerticalAlignment="Top"/>
                     <Ellipse x:Name="que4_1" Fill="White" HorizontalAlignment="Left" Height="50" Width="50" Stroke="Black" VerticalAlignment="Top"/>
+                    <Ellipse x:Name="que4_2" Fill="White" HorizontalAlignment="Left" Height="50" Width="50" Stroke="Black" VerticalAlignment="Top"/>
+                    <Ellipse x:Name="que4_3" Fill="White" HorizontalAlignment="Left" Height="50" Width="50" Stroke="Black" VerticalAlignment="Top"/>
+                    <Ellipse x:Name="que4_4" Fill="White" HorizontalAlignment="Left" Height="50" Width="50" Stroke="Black" VerticalAlignment="Top"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <ItemsControl>
@@ -93,16 +93,16 @@
                             </ItemsPanelTemplate>
                         </ItemsControl.ItemsPanel>
                         <ItemsControl.Items>
-                            <Ellipse x:Name="ans3_4" Fill="White" HorizontalAlignment="Left" Height="25" Width="25" Stroke="Black" VerticalAlignment="Top"/>
+                            <Ellipse x:Name="ans3_1" Fill="White" HorizontalAlignment="Left" Height="25" Width="25" Stroke="Black" VerticalAlignment="Top"/>
                             <Ellipse x:Name="ans3_3" Fill="White" HorizontalAlignment="Left" Height="25" Width="25" Stroke="Black" VerticalAlignment="Top"/>
                             <Ellipse x:Name="ans3_2" Fill="White" HorizontalAlignment="Left" Height="25" Width="25" Stroke="Black" VerticalAlignment="Top"/>
-                            <Ellipse x:Name="ans3_1" Fill="White" HorizontalAlignment="Left" Height="25" Width="25" Stroke="Black" VerticalAlignment="Top"/>
+                            <Ellipse x:Name="ans3_4" Fill="White" HorizontalAlignment="Left" Height="25" Width="25" Stroke="Black" VerticalAlignment="Top"/>
                         </ItemsControl.Items>
                     </ItemsControl>
-                    <Ellipse x:Name="que3_4" Fill="White" HorizontalAlignment="Left" Height="50" Width="50" Stroke="Black" VerticalAlignment="Top"/>
-                    <Ellipse x:Name="que3_3" Fill="White" HorizontalAlignment="Left" Height="50" Width="50" Stroke="Black" VerticalAlignment="Top"/>
-                    <Ellipse x:Name="que3_2" Fill="White" HorizontalAlignment="Left" Height="50" Width="50" Stroke="Black" VerticalAlignment="Top"/>
                     <Ellipse x:Name="que3_1" Fill="White" HorizontalAlignment="Left" Height="50" Width="50" Stroke="Black" VerticalAlignment="Top"/>
+                    <Ellipse x:Name="que3_2" Fill="White" HorizontalAlignment="Left" Height="50" Width="50" Stroke="Black" VerticalAlignment="Top"/>
+                    <Ellipse x:Name="que3_3" Fill="White" HorizontalAlignment="Left" Height="50" Width="50" Stroke="Black" VerticalAlignment="Top" RenderTransformOrigin="0.615,-0.095"/>
+                    <Ellipse x:Name="que3_4" Fill="White" HorizontalAlignment="Left" Height="50" Width="50" Stroke="Black" VerticalAlignment="Top"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <ItemsControl>
@@ -112,16 +112,16 @@
                             </ItemsPanelTemplate>
                         </ItemsControl.ItemsPanel>
                         <ItemsControl.Items>
-                            <Ellipse x:Name="ans2_4" Fill="White" HorizontalAlignment="Left" Height="25" Width="25" Stroke="Black" VerticalAlignment="Top"/>
+                            <Ellipse x:Name="ans2_1" Fill="White" HorizontalAlignment="Left" Height="25" Width="25" Stroke="Black" VerticalAlignment="Top"/>
                             <Ellipse x:Name="ans2_3" Fill="White" HorizontalAlignment="Left" Height="25" Width="25" Stroke="Black" VerticalAlignment="Top"/>
                             <Ellipse x:Name="ans2_2" Fill="White" HorizontalAlignment="Left" Height="25" Width="25" Stroke="Black" VerticalAlignment="Top"/>
-                            <Ellipse x:Name="ans2_1" Fill="White" HorizontalAlignment="Left" Height="25" Width="25" Stroke="Black" VerticalAlignment="Top"/>
+                            <Ellipse x:Name="ans2_4" Fill="White" HorizontalAlignment="Left" Height="25" Width="25" Stroke="Black" VerticalAlignment="Top"/>
                         </ItemsControl.Items>
                     </ItemsControl>
-                    <Ellipse x:Name="que2_4" Fill="White" HorizontalAlignment="Left" Height="50" Width="50" Stroke="Black" VerticalAlignment="Top"/>
-                    <Ellipse x:Name="que2_3" Fill="White" HorizontalAlignment="Left" Height="50" Width="50" Stroke="Black" VerticalAlignment="Top"/>
-                    <Ellipse x:Name="que2_2" Fill="White" HorizontalAlignment="Left" Height="50" Width="50" Stroke="Black" VerticalAlignment="Top"/>
                     <Ellipse x:Name="que2_1" Fill="White" HorizontalAlignment="Left" Height="50" Width="50" Stroke="Black" VerticalAlignment="Top"/>
+                    <Ellipse x:Name="que2_2" Fill="White" HorizontalAlignment="Left" Height="50" Width="50" Stroke="Black" VerticalAlignment="Top"/>
+                    <Ellipse x:Name="que2_3" Fill="White" HorizontalAlignment="Left" Height="50" Width="50" Stroke="Black" VerticalAlignment="Top"/>
+                    <Ellipse x:Name="que2_4" Fill="White" HorizontalAlignment="Left" Height="50" Width="50" Stroke="Black" VerticalAlignment="Top"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <ItemsControl>
@@ -131,19 +131,29 @@
                             </ItemsPanelTemplate>
                         </ItemsControl.ItemsPanel>
                         <ItemsControl.Items>
-                            <Ellipse x:Name="ans1_4" Fill="White" HorizontalAlignment="Left" Height="25" Width="25" Stroke="Black" VerticalAlignment="Top"/>
+                            <Ellipse x:Name="ans1_1" Fill="White" HorizontalAlignment="Left" Height="25" Width="25" Stroke="Black" VerticalAlignment="Top"/>
                             <Ellipse x:Name="ans1_3" Fill="White" HorizontalAlignment="Left" Height="25" Width="25" Stroke="Black" VerticalAlignment="Top"/>
                             <Ellipse x:Name="ans1_2" Fill="White" HorizontalAlignment="Left" Height="25" Width="25" Stroke="Black" VerticalAlignment="Top"/>
-                            <Ellipse x:Name="ans1_1" Fill="White" HorizontalAlignment="Left" Height="25" Width="25" Stroke="Black" VerticalAlignment="Top"/>
+                            <Ellipse x:Name="ans1_4" Fill="White" HorizontalAlignment="Left" Height="25" Width="25" Stroke="Black" VerticalAlignment="Top"/>
                         </ItemsControl.Items>
                     </ItemsControl>
-                    <Ellipse x:Name="que1_4" Fill="White" HorizontalAlignment="Left" Height="50" Width="50" Stroke="Black" VerticalAlignment="Top"/>
-                    <Ellipse x:Name="que1_3" Fill="White" HorizontalAlignment="Left" Height="50" Width="50" Stroke="Black" VerticalAlignment="Top"/>
-                    <Ellipse x:Name="que1_2" Fill="White" HorizontalAlignment="Left" Height="50" Width="50" Stroke="Black" VerticalAlignment="Top"/>
                     <Ellipse x:Name="que1_1" Fill="White" HorizontalAlignment="Left" Height="50" Width="50" Stroke="Black" VerticalAlignment="Top"/>
+                    <Ellipse x:Name="que1_2" Fill="White" HorizontalAlignment="Left" Height="50" Width="50" Stroke="Black" VerticalAlignment="Top"/>
+                    <Ellipse x:Name="que1_3" Fill="White" HorizontalAlignment="Left" Height="50" Width="50" Stroke="Black" VerticalAlignment="Top"/>
+                    <Ellipse x:Name="que1_4" Fill="White" HorizontalAlignment="Left" Height="50" Width="50" Stroke="Black" VerticalAlignment="Top"/>
                 </StackPanel>
             </StackPanel>
         </Grid>
-
+        <StackPanel HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100">
+            <StackPanel Height="100"/>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" Height="54" Margin="539,343,0,0" VerticalAlignment="Top" Width="200">
+            <StackPanel Orientation="Horizontal" Height="62">
+                <Ellipse x:Name="op1" Fill="White" HorizontalAlignment="Left" Height="50" Width="50" Stroke="Black" VerticalAlignment="Top"/>
+                <Ellipse x:Name="op2" Fill="White" HorizontalAlignment="Left" Height="50" Width="50" Stroke="Black" VerticalAlignment="Top"/>
+                <Ellipse x:Name="op3" Fill="White" HorizontalAlignment="Left" Height="50" Width="50" Stroke="Black" VerticalAlignment="Top"/>
+                <Ellipse x:Name="op4" Fill="White" HorizontalAlignment="Left" Height="50" Width="50" Stroke="Black" VerticalAlignment="Top"/>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Page>
