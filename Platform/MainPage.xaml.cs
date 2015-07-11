@@ -47,5 +47,6 @@ namespace Platform
                 this.Frame.Navigate(dict[s]);
             }
         }
+        
     }
 }

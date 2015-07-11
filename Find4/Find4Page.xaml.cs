@@ -29,7 +29,7 @@ namespace Find4
         colors color;
         Block option;
         ComboBlock[] panel;
-
+        bool game_over;
 
         public Find4Page()
         {
@@ -39,6 +39,8 @@ namespace Find4
 
         public void initialize()
         {
+            textBlock.Text = "";
+            game_over = false;
             round = 0;
             cur_pos = 0;
             color = new colors();
@@ -50,16 +52,19 @@ namespace Find4
             panel[3] = new ComboBlock(ans4_1, ans4_2, ans4_3, ans4_4, que4_1, que4_2, que4_3, que4_4);
             panel[4] = new ComboBlock(ans5_1, ans5_2, ans5_3, ans5_4, que5_1, que5_2, que5_3, que5_4);
             panel[5] = new ComboBlock(ans6_1, ans6_2, ans6_3, ans6_4, que6_1, que6_2, que6_3, que6_4);
+
         }
 
         private void add_color(object sender, TappedRoutedEventArgs e)
         {
+            if (game_over) return;
+
             Ellipse ellip = sender as Ellipse;
             if (cur_pos < 3)
             {
                 if (ellip != null)
                 {
-                    panel[round].que[cur_pos].Fill = ellip.Fill;
+                    panel[round].que.foo[cur_pos].Fill = ellip.Fill;
 
                 }
                 cur_pos++;
@@ -68,12 +73,12 @@ namespace Find4
             {
                 if (ellip != null)
                 {
-                    panel[round].que[cur_pos].Fill = ellip.Fill;
+                    panel[round].que.foo[cur_pos].Fill = ellip.Fill;
 
                 }
                 if (check())
                 {
-                    //win();
+                    win();
                 }
                 cur_pos = 0;
                 round++;
@@ -93,10 +98,10 @@ namespace Find4
             Color col1, col2;
             for (int i = 0; i < 4; i++)
             {
-                var brush1 = option.que[i].Fill as SolidColorBrush;
+                var brush1 = option.foo[i].Fill as SolidColorBrush;
                 if (brush1 != null)
                     col1 = brush1.Color;
-                var brush2 = panel[round].que[i].Fill as SolidColorBrush;
+                var brush2 = panel[round].que.foo[i].Fill as SolidColorBrush;
                 if (brush2 != null)
                     col2 = brush2.Color;
 
@@ -110,13 +115,13 @@ namespace Find4
 
             for (int i = 0; i < listOption.Count; i++)
             {
-                var brush1 = option.que[listOption[i]].Fill as SolidColorBrush;
+                var brush1 = option.foo[listOption[i]].Fill as SolidColorBrush;
                 if (brush1 != null)
                     col1 = brush1.Color;
 
                 for (int k = 0; k < listAns.Count; k++)
                 {
-                    var brush2 = panel[round].que[listAns[k]].Fill as SolidColorBrush;
+                    var brush2 = panel[round].que.foo[listAns[k]].Fill as SolidColorBrush;
                     if (brush2 != null)
                         col2 = brush2.Color;
                     if (col1 == col2)
@@ -130,11 +135,11 @@ namespace Find4
             int j;
             for (j = 0; j < black; j++)
             {
-                panel[round].ans[j].Fill = color.black;
+                panel[round].ans.foo[j].Fill = color.black;
             }
             for (int i = 0; i < white; i++)
             {
-                panel[round].ans[j].Fill = color.white;
+                panel[round].ans.foo[j].Fill = color.white;
                 j++;
             }
 
@@ -145,25 +150,30 @@ namespace Find4
         /* OI win kai lose einai proxires...vlepoume ti tha kanoume */
         private void win()
         {
-            initialize();
+            game_over = true;
+            textBlock.Text = "WINNER";
         }
         private void lose()
         {
-            initialize();
+            game_over = true;
+            textBlock.Text = "LOSER";
         }
 
 
         public class Block
         {
-            public Ellipse[] que { get; set; }
-            public Block() { }  //////////////////////////////////////////////////
+            public Ellipse[] foo { get; set; }
             public Block(Ellipse q1, Ellipse q2, Ellipse q3, Ellipse q4)
             {
-                que = new Ellipse[4];
-                que[0] = q1;
-                que[1] = q2;
-                que[2] = q3;
-                que[3] = q4;
+                foo = new Ellipse[4];
+                foo[0] = q1;
+                foo[1] = q2;
+                foo[2] = q3;
+                foo[3] = q4;
+            }
+
+            public void randomize()
+            {
                 colors col = new colors();
                 Random rand = new Random();
                 for (int i = 0; i < 4; i++)
@@ -172,55 +182,47 @@ namespace Find4
                     switch (option)
                     {
                         case 1:
-                            que[i].Fill = col.red;
+                            foo[i].Fill = col.red;
                             break;
                         case 2:
-                            que[i].Fill = col.orange;
+                            foo[i].Fill = col.orange;
                             break;
                         case 3:
-                            que[i].Fill = col.indigo;
+                            foo[i].Fill = col.indigo;
                             break;
-
                         case 4:
-                            que[i].Fill = col.yellow;
+                            foo[i].Fill = col.yellow;
                             break;
                         case 5:
-                            que[i].Fill = col.blue;
+                            foo[i].Fill = col.blue;
                             break;
                         case 6:
-                            que[i].Fill = col.green;
+                            foo[i].Fill = col.green;
                             break;
-
                     }
                 }
             }
+            public void gray()
+            {
+                colors col = new colors();
+                for (int i = 0; i < 4; i++)
+                {
+                    foo[i].Fill = col.gray;
+                }
+            }
         }
-        public class ComboBlock : Block
+        public class ComboBlock
         {
-            public Ellipse[] ans { get; set; }
+            public Block ans { get; set; }
+            public Block que { get; set; }
 
             public ComboBlock(Ellipse a1, Ellipse a2, Ellipse a3, Ellipse a4,
                 Ellipse q1, Ellipse q2, Ellipse q3, Ellipse q4)
             {
-                colors color = new colors();
-                ans = new Ellipse[4];
-                ans[0] = a1;
-                ans[1] = a2;
-                ans[2] = a3;
-                ans[3] = a4;
-                a1.Fill = color.gray;
-                a2.Fill = color.gray;
-                a3.Fill = color.gray;
-                a4.Fill = color.gray;
-                que = new Ellipse[4];
-                que[0] = q1;
-                que[1] = q2;
-                que[2] = q3;
-                que[3] = q4;
-                q1.Fill = color.gray;
-                q2.Fill = color.gray;
-                q3.Fill = color.gray;
-                q4.Fill = color.gray;
+                que = new Block(q1, q2, q3, q4);
+                ans = new Block(a1, a2, a3, a4);
+                que.gray();
+                ans.gray();
             }
         }
         public class colors
@@ -259,8 +261,8 @@ namespace Find4
             }
         }
 
-      
-          private void Exit_Click(object sender, RoutedEventArgs e)
+
+        private void Exit_Click(object sender, RoutedEventArgs e)
         {
             if (this.Frame != null)
             {
@@ -268,6 +270,9 @@ namespace Find4
             }
         }
 
-    
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            initialize();
+        }
     }
 }

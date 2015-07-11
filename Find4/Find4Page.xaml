@@ -8,7 +8,21 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Grid HorizontalAlignment="Right" VerticalAlignment="Center">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        
+        <Grid Grid.Column="0">
+            <Button x:Name="button" Content="Restart" HorizontalAlignment="Left" VerticalAlignment="Top" Click="button_Click"/>
+            <Button x:Name="Exit" Content="Exit" HorizontalAlignment="Left" VerticalAlignment="Top" Height="47" Width="142" Click="Exit_Click"/>
+        </Grid>
+        
+        <Grid HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="2">
+
+            <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+
             <ItemsControl>
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
@@ -26,7 +40,7 @@
             </ItemsControl>
         </Grid>
 
-        <Grid HorizontalAlignment="Left" VerticalAlignment="Center">
+        <Grid VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1">
             <StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <ItemsControl>
@@ -144,10 +158,7 @@
                 </StackPanel>
             </StackPanel>
         </Grid>
-        <StackPanel HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100">
-            <StackPanel Height="100"/>
-        </StackPanel>
-        <StackPanel HorizontalAlignment="Left" Height="54" Margin="539,343,0,0" VerticalAlignment="Top" Width="200">
+        <StackPanel HorizontalAlignment="Left" Height="54" Margin="598,205,0,0" VerticalAlignment="Top" Width="200">
             <StackPanel Orientation="Horizontal" Height="62">
                 <Ellipse x:Name="op1" Fill="White" HorizontalAlignment="Left" Height="50" Width="50" Stroke="Black" VerticalAlignment="Top"/>
                 <Ellipse x:Name="op2" Fill="White" HorizontalAlignment="Left" Height="50" Width="50" Stroke="Black" VerticalAlignment="Top"/>
@@ -155,6 +166,5 @@
                 <Ellipse x:Name="op4" Fill="White" HorizontalAlignment="Left" Height="50" Width="50" Stroke="Black" VerticalAlignment="Top"/>
             </StackPanel>
         </StackPanel>
-        <Button x:Name="Exit" Content="Exit" HorizontalAlignment="Left" Margin="600,545,0,0" VerticalAlignment="Top" Height="47" Width="142" Click="Exit_Click"/>
     </Grid>
 </Page>

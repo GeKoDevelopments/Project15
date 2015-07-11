@@ -31,6 +31,7 @@ namespace Game15
         Random rnd;
         int difficulty;
         int counter;
+        bool game_over;
 
         public Game15Page()
         {
@@ -43,6 +44,7 @@ namespace Game15
             rnd = new Random();
             difficulty = 15;
             counter = 0;
+            game_over = true;
 
             empty = new Point(3, 3);
 
@@ -98,6 +100,8 @@ namespace Game15
 
         private void move(object sender, TappedRoutedEventArgs e)
         {
+            if (game_over) return;
+
             panel[empty.X][empty.Y].set_visible(true);
             Grid gr = (Grid)sender;
             Point pos = null;
@@ -137,7 +141,10 @@ namespace Game15
             textBlock.Text = "Clicks: " + counter;
 
             if (check_win() == true)
+            {
                 shuffle.Visibility = Visibility.Visible;
+                game_over = true;
+            }
 
             panel[empty.X][empty.Y].set_visible(false);
         }
@@ -145,6 +152,7 @@ namespace Game15
         private void Shuffle(object sender, RoutedEventArgs e)
         {
             Tile y;
+            game_over = false;
             shuffle.Visibility = Visibility.Collapsed;
             for (int i = 0; i < difficulty; i++)
             {
