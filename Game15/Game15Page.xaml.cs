@@ -1,28 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
-using Windows.UI.Xaml.Media.Imaging;
-using System.Resources;
-using Windows.UI.Xaml.Shapes;
-
-// The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace Game15
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
     public sealed partial class Game15Page : Page
     {
         public Tile[][] panel;
@@ -213,42 +195,6 @@ namespace Game15
             {
                 this.Frame.GoBack();
             }
-        }
-    }
-
-    public class Point
-    {
-        public int X { get; set; }
-        public int Y { get; set; }
-        public Point(int x, int y) { X = x; Y = y; }
-    }
-
-    public class Tile
-    {
-        public Grid g { get; }
-        private Rectangle r;
-        private TextBlock t;
-        public Tile(Grid gr, Rectangle re, TextBlock te, string nu)
-        {
-            g = gr;
-            r = re;
-            t = te;
-            t.Text = nu;
-        }
-        public void set_text(string te)
-        {
-            t.Text = te;
-        }
-        public string get_text()
-        {
-            return t.Text;
-        }
-        public void set_visible(bool b)
-        {
-            if (b)
-                r.Visibility = Visibility.Visible;
-            else
-                r.Visibility = Visibility.Collapsed;
         }
     }
 }
