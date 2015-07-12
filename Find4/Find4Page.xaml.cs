@@ -148,7 +148,7 @@ namespace Find4
         private void win()
         {
             Game_Over = true;
-            textBlock.Text = "WINNER";
+            textBlock.Text = "WINNER!!!";
         }
         private void lose()
         {
@@ -172,10 +172,22 @@ namespace Find4
         public void OptionVisible(bool b)
         {
             if (b)
+            {
+                op_text.Visibility = Visibility.Visible;
                 op.Visibility = Visibility.Visible;
+            }
             else
+            {
+                op_text.Visibility = Visibility.Collapsed;
                 op.Visibility = Visibility.Collapsed;
+            }
         }
 
+        private void Undo_Click(object sender, RoutedEventArgs e)
+        {
+            if ( game_over || cur_pos==0 ) return;
+            cur_pos--;
+            panel[round].que.gray(cur_pos,cur_pos+1);
+        }
     }
 }

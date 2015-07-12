@@ -46,10 +46,11 @@ namespace Find4
                     }
                 }
             }
-            public void gray()
+            public void gray(int from=0, int to=4)
             {
+                if (from < 0 || to > 4) return;
                 colors col = new colors();
-                for (int i = 0; i < 4; i++)
+                for (int i = from; i < to; i++)
                 {
                     foo[i].Fill = col.gray;
                 }
