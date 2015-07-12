@@ -1,6 +1,4 @@
-﻿using Find4;
-using Game15;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -17,36 +15,24 @@ using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace Platform
+namespace Game15
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class MainPage : Page
+    public sealed partial class CreditsPage : Page
     {
-        Dictionary<string, Type> dict;
-        public MainPage()
+        public CreditsPage()
         {
             this.InitializeComponent();
-            initialize();
         }
 
-        private void initialize()
+        private void Exit_Click(object sender, RoutedEventArgs e)
         {
-            dict = new Dictionary<string, Type>();
-            dict["Game15"] = typeof(game15_selection_display);
-            dict["Find4"] = typeof(Find4_selection_display);
-        }
-
-        private void button_Click(object sender, RoutedEventArgs e)
-        {
-            Button b = (Button)sender;
-            string s = b.Name;
             if (this.Frame != null)
             {
-                this.Frame.Navigate(dict[s]);
+                this.Frame.GoBack();
             }
         }
-        
     }
 }

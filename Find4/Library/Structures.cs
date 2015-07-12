@@ -20,28 +20,28 @@ namespace Find4
             {
                 colors col = new colors();
                 Random rand = new Random();
-                for (int i = 0; i < 4; i++)
+            foreach (Ellipse e in foo)
                 {
                     int option = rand.Next(1, 7);
                     switch (option)
                     {
                         case 1:
-                            foo[i].Fill = col.red;
+                        e.Fill = col.red;
                             break;
                         case 2:
-                            foo[i].Fill = col.orange;
+                        e.Fill = col.orange;
                             break;
                         case 3:
-                            foo[i].Fill = col.indigo;
+                        e.Fill = col.indigo;
                             break;
                         case 4:
-                            foo[i].Fill = col.yellow;
+                        e.Fill = col.yellow;
                             break;
                         case 5:
-                            foo[i].Fill = col.blue;
+                        e.Fill = col.blue;
                             break;
                         case 6:
-                            foo[i].Fill = col.green;
+                        e.Fill = col.green;
                             break;
                     }
                 }
@@ -57,11 +57,10 @@ namespace Find4
             }
         }
 
-
         public class ComboBlock
         {
-            public Block ans { get; set; }
-            public Block que { get; set; }
+        public Block ans;
+        public Block que;
 
             public ComboBlock(Ellipse a1, Ellipse a2, Ellipse a3, Ellipse a4,
                 Ellipse q1, Ellipse q2, Ellipse q3, Ellipse q4)
