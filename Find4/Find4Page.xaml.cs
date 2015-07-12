@@ -19,11 +19,11 @@ namespace Find4
 
         private bool Game_Over
         {
-           get
+            get
             {
                 return game_over;
             }
-           set
+            set
             {
                 game_over = value;
                 OptionVisible(game_over);
@@ -38,13 +38,8 @@ namespace Find4
 
         private void initialize()
         {
-            textBlock.Text = "";
-            Game_Over = false;
-            round = 0;
-            cur_pos = 0;
             color = new colors();
             option = new Block(op1, op2, op3, op4);
-            option.randomize();
             panel = new ComboBlock[6];
             panel[0] = new ComboBlock(ans1_1, ans1_2, ans1_3, ans1_4, que1_1, que1_2, que1_3, que1_4);
             panel[1] = new ComboBlock(ans2_1, ans2_2, ans2_3, ans2_4, que2_1, que2_2, que2_3, que2_4);
@@ -52,6 +47,20 @@ namespace Find4
             panel[3] = new ComboBlock(ans4_1, ans4_2, ans4_3, ans4_4, que4_1, que4_2, que4_3, que4_4);
             panel[4] = new ComboBlock(ans5_1, ans5_2, ans5_3, ans5_4, que5_1, que5_2, que5_3, que5_4);
             panel[5] = new ComboBlock(ans6_1, ans6_2, ans6_3, ans6_4, que6_1, que6_2, que6_3, que6_4);
+            reset();
+        }
+        private void reset()
+        {
+            textBlock.Text = "";
+            Game_Over = false;
+            round = 0;
+            cur_pos = 0;
+            option.randomize();
+            foreach (ComboBlock c in panel)
+            {
+                c.ans.gray();
+                c.que.gray();
+            }
         }
 
         private void add_color(object sender, TappedRoutedEventArgs e)
@@ -75,7 +84,7 @@ namespace Find4
                     panel[round].que.foo[cur_pos].Fill = ellip.Fill;
 
                 }
-                if ( check() )
+                if (check())
                 {
                     win();
                 }
@@ -158,7 +167,7 @@ namespace Find4
 
         private void Restart_Click(object sender, RoutedEventArgs e)
         {
-            initialize();
+            reset();
         }
 
         private void Exit_Click(object sender, RoutedEventArgs e)
