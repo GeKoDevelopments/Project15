@@ -41,10 +41,12 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Library\Color.cs" />
     <Compile Include="Find4Page.xaml.cs">
       <DependentUpon>Find4Page.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Library\Stucures.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

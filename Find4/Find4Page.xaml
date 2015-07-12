@@ -15,7 +15,7 @@
         </Grid.ColumnDefinitions>
         
         <Grid Grid.Column="0">
-            <Button x:Name="button" Content="Restart" HorizontalAlignment="Left" VerticalAlignment="Top" Click="button_Click"/>
+            <Button x:Name="button" Content="Restart" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Restart_Click"/>
             <Button x:Name="Exit" Content="Exit" HorizontalAlignment="Left" VerticalAlignment="Top" Height="47" Width="142" Click="Exit_Click"/>
         </Grid>
         
@@ -158,13 +158,11 @@
                 </StackPanel>
             </StackPanel>
         </Grid>
-        <StackPanel HorizontalAlignment="Left" Height="54" Margin="598,205,0,0" VerticalAlignment="Top" Width="200">
-            <StackPanel Orientation="Horizontal" Height="62">
+        <StackPanel x:Name="op" Height="54" Orientation="Horizontal" VerticalAlignment="Center" Width="200" RenderTransformOrigin="0.498,0.505" HorizontalAlignment="Center">   
                 <Ellipse x:Name="op1" Fill="White" HorizontalAlignment="Left" Height="50" Width="50" Stroke="Black" VerticalAlignment="Top"/>
                 <Ellipse x:Name="op2" Fill="White" HorizontalAlignment="Left" Height="50" Width="50" Stroke="Black" VerticalAlignment="Top"/>
                 <Ellipse x:Name="op3" Fill="White" HorizontalAlignment="Left" Height="50" Width="50" Stroke="Black" VerticalAlignment="Top"/>
-                <Ellipse x:Name="op4" Fill="White" HorizontalAlignment="Left" Height="50" Width="50" Stroke="Black" VerticalAlignment="Top"/>
-            </StackPanel>
+            <Ellipse x:Name="op4" Fill="White" HorizontalAlignment="Left" Height="50" Width="50" Stroke="Black" VerticalAlignment="Top"/>
         </StackPanel>
     </Grid>
 </Page>
