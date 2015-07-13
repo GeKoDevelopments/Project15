@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="Black">
         <ScrollViewer HorizontalAlignment="Left" VerticalAlignment="Center" Width="250">
             <StackPanel>
                 <Button x:Name="Game15" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="60" Content="Game15" Click="button_Click"/>

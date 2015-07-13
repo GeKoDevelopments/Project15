@@ -8,28 +8,18 @@
     mc:Ignorable="d">
 
     <Grid Background="Black">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="2*"/>
-            <ColumnDefinition Width="1*"/>
-        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
 
-        <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Column="1" Background="Black"  >
-            <Grid.RowDefinitions>
-                <RowDefinition Height="1*"/>
-                <RowDefinition Height="1.5*"/>
-            </Grid.RowDefinitions>
+        <Image x:Name="game_image" HorizontalAlignment="Center" VerticalAlignment="Center" Source="img/game15.png" Grid.Row="0" Margin="25"/>
 
-            <Image x:Name="game_image" HorizontalAlignment="Center" Height="229"  VerticalAlignment="Center" Width="228" Source="img/game15.png" />
-
-            <StackPanel x:Name="selections"  Orientation="Vertical"  VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Row="1"   >
-                <Button x:Name="Play" Content="Play" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Play_Click" Height="100" Width="200"/>
-                <Button x:Name="Instructions" Content="Instructions" HorizontalAlignment="Left"  Grid.Row="1" VerticalAlignment="Top" Height="100" Width="200" Click="Instructions_Click"/>
-                <Button x:Name="Credits" Content="Credits" HorizontalAlignment="Left"  Grid.Row="1" VerticalAlignment="Top" Height="100" Width="200" Click="Credits_Click"/>
-                <Button x:Name="Exit" Content="Exit" HorizontalAlignment="Left"  VerticalAlignment="Top" Click="Exit_Click"  Width="200" Height="100"/>
-            </StackPanel>
-
-            
-        </Grid>
+        <StackPanel x:Name="selections" VerticalAlignment="Center" HorizontalAlignment="Center" Width="200" Grid.Row="1">
+            <Button x:Name="Play" Content="Play" Click="Play_Click" HorizontalAlignment="Stretch" Height="100"/>
+            <Button x:Name="Instructions" Content="Instructions" Click="Instructions_Click" HorizontalAlignment="Stretch" Height="100"/>
+            <Button x:Name="Credits" Content="Credits" Click="Credits_Click" HorizontalAlignment="Stretch" Height="100"/>
+            <Button x:Name="Exit" Content="Exit" Click="Exit_Click" HorizontalAlignment="Stretch" Height="100"/>
+        </StackPanel>
     </Grid>
 </Page>

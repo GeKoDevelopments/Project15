@@ -13,6 +13,8 @@ namespace Find4
         private bool game_over;
         private int round;
         private int cur_pos;
+        private int wins;
+        private int loses;
         private colors color;
         private Block option;
         private ComboBlock[] panel;
@@ -38,6 +40,10 @@ namespace Find4
 
         private void initialize()
         {
+            wins = 0;
+            loses = 0;
+            winscore.Text = "W:\t" + wins;
+            losescore.Text = "L:\t" + loses;
             color = new colors();
             option = new Block(op1, op2, op3, op4);
             panel = new ComboBlock[6];
@@ -157,12 +163,16 @@ namespace Find4
         private void win()
         {
             Game_Over = true;
+            wins++;
             textBlock.Text = "WINNER!!!";
+            winscore.Text = "W:\t" + wins;
         }
         private void lose()
         {
             Game_Over = true;
+            loses++;
             textBlock.Text = "LOSER";
+            losescore.Text = "L:\t" + loses;
         }
 
         private void Restart_Click(object sender, RoutedEventArgs e)
@@ -184,11 +194,13 @@ namespace Find4
             {
                 op_text.Visibility = Visibility.Visible;
                 op.Visibility = Visibility.Visible;
+                undo.Visibility = Visibility.Collapsed;
             }
             else
             {
                 op_text.Visibility = Visibility.Collapsed;
                 op.Visibility = Visibility.Collapsed;
+                undo.Visibility = Visibility.Visible;
             }
         }
 
