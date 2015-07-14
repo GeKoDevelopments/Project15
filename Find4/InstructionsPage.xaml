@@ -7,7 +7,13 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="Black">
-        <Button x:Name="Exit" Content="Exit" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Exit_Click"/>
+    <Grid Background="Black" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Tapped="Exit_Click">
+        <StackPanel VerticalAlignment="Center">
+            <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Guess the secret combination of colors." VerticalAlignment="Center" FontSize="48"/>
+            <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="You have up to 6 tries.&#10;" VerticalAlignment="Center" FontSize="48"/>
+            <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="• A black answer means you have guessed&#10;a correct color in the correct position.&#10;"  FontSize="48"/>
+            <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="• A white answer means you have guessed&#10;a correct color in the wrong position." FontSize="48"/>
+        </StackPanel>
     </Grid>
+
 </Page>

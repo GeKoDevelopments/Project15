@@ -2,26 +2,11 @@
 using Game15;
 using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
-
-// The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace Platform
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
     public sealed partial class MainPage : Page
     {
         Dictionary<string, Type> dict;
@@ -36,6 +21,7 @@ namespace Platform
             dict = new Dictionary<string, Type>();
             dict["Game15"] = typeof(game15_selection_display);
             dict["Find4"] = typeof(Find4_selection_display);
+            dict["Credits"] = typeof(CreditsPage);
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
@@ -47,6 +33,5 @@ namespace Platform
                 this.Frame.Navigate(dict[s]);
             }
         }
-        
     }
 }

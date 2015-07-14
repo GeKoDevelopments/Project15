@@ -12,6 +12,7 @@
             <StackPanel>
                 <Button x:Name="Game15" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="60" Content="Game15" Click="button_Click"/>
                 <Button x:Name="Find4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="60" Content="Find4" Click="button_Click"/>
+                <Button x:Name="Credits" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="60" Content="Credits" Click="button_Click"/>
             </StackPanel>
         </ScrollViewer>
 

@@ -1,11 +1,11 @@
 ﻿using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
-namespace Find4
+namespace Platform
 {
-    public sealed partial class InstructionsPage : Page
+    public sealed partial class CreditsPage : Page
     {
-        public InstructionsPage()
+        public CreditsPage()
         {
             this.InitializeComponent();
         }

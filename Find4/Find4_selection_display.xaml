@@ -16,9 +16,9 @@
         <Image x:Name="game_image" HorizontalAlignment="Center" VerticalAlignment="Center" Source="img/quess_color.jpg" Grid.Row="0" Margin="25"/>
 
         <StackPanel x:Name="selections" VerticalAlignment="Center" HorizontalAlignment="Center" Width="200" Grid.Row="1">
-            <Button x:Name="Play" Content="Play" HorizontalAlignment="Stretch" Click="Play_Click" Height="100"/>
-            <Button x:Name="Instructions" Content="Instructions" HorizontalAlignment="Stretch" Height="100" Click="Instructions_Click"/>
-            <Button x:Name="Credits" Content="Credits" HorizontalAlignment="Stretch" Height="100" Click="Credits_Click"/>
+            <Button x:Name="Play" Content="Play" HorizontalAlignment="Stretch" Click="button_Click" Height="100"/>
+            <Button x:Name="Instructions" Content="Instructions" HorizontalAlignment="Stretch" Height="100" Click="button_Click"/>
+            <Button x:Name="Credits" Content="Credits" HorizontalAlignment="Stretch" Height="100" Click="button_Click"/>
             <Button x:Name="Exit" Content="Exit" HorizontalAlignment="Stretch" Click="Exit_Click" Height="100"/>
         </StackPanel>
     </Grid>

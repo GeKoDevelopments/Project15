@@ -206,9 +206,11 @@ namespace Find4
 
         private void Undo_Click(object sender, RoutedEventArgs e)
         {
-            if ( game_over || cur_pos==0 ) return;
+            if (game_over || cur_pos == 0)
+                return;
+
+            panel[round].que.gray(cur_pos, cur_pos);
             cur_pos--;
-            panel[round].que.gray(cur_pos,cur_pos+1);
         }
     }
 }

@@ -7,7 +7,11 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="Black">
-        <Button x:Name="Exit" Content="Exit" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Exit_Click"/>
+    <Grid Background="Black" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Tapped="Exit_Click">
+        <StackPanel VerticalAlignment="Center">
+            <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Sort the numbers by moving them into position." VerticalAlignment="Center" FontSize="48"/>
+            <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Use the blank space to move a row or a column." VerticalAlignment="Center" FontSize="48"/>
+            <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Try to make as few moves as possible." VerticalAlignment="Center" FontSize="48"/>
+        </StackPanel>
     </Grid>
 </Page>
