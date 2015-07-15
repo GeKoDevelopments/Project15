@@ -15,6 +15,7 @@ namespace Platform
             this.Suspending += OnSuspending;
         }
         
+        /// <param name="e">Details about the launch request and process.</param>
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
 
