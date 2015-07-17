@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
-  <Identity Name="10390GeKoDevelopments.PlatformGames" Publisher="CN=42D8A795-9BA6-4502-B616-2BE5DAFD6CE6" Version="1.1.0.1" />
+  <Identity Name="10390GeKoDevelopments.PlatformGames" Publisher="CN=42D8A795-9BA6-4502-B616-2BE5DAFD6CE6" Version="1.1.0.2" />
   <Properties>
     <DisplayName>Platform Games</DisplayName>
     <PublisherDisplayName>GeKo Developments</PublisherDisplayName>

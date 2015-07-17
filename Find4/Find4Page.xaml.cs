@@ -32,6 +32,46 @@ namespace Find4
             }
         }
 
+        public int Round
+        {
+            get
+            {
+                return round;
+            }
+
+            set
+            {
+                round = value;
+                switch (round)
+                {
+                    case 0:
+                        highlight6.Stroke.Opacity = 0;
+                        highlight1.Stroke.Opacity = 100;
+                        break;
+                    case 1:
+                        highlight1.Stroke.Opacity = 0;
+                        highlight2.Stroke.Opacity = 100;
+                        break;
+                    case 2:
+                        highlight2.Stroke.Opacity = 0;
+                        highlight3.Stroke.Opacity = 100;
+                        break;
+                    case 3:
+                        highlight3.Stroke.Opacity = 0;
+                        highlight4.Stroke.Opacity = 100;
+                        break;
+                    case 4:
+                        highlight4.Stroke.Opacity = 0;
+                        highlight5.Stroke.Opacity = 100;
+                        break;
+                    case 5:
+                        highlight5.Stroke.Opacity = 0;
+                        highlight6.Stroke.Opacity = 100;
+                        break;
+                }
+            }
+        }
+
         public Find4Page()
         {
             InitializeComponent();
@@ -57,9 +97,15 @@ namespace Find4
         }
         private void reset()
         {
+            highlight1.Stroke.Opacity = 0;
+            highlight2.Stroke.Opacity = 0;
+            highlight3.Stroke.Opacity = 0;
+            highlight4.Stroke.Opacity = 0;
+            highlight5.Stroke.Opacity = 0;
+            highlight6.Stroke.Opacity = 0;
             textBlock.Text = "";
             Game_Over = false;
-            round = 0;
+            Round = 0;
             cur_pos = 0;
             option.randomize();
             foreach (ComboBlock c in panel)
@@ -78,7 +124,7 @@ namespace Find4
             {
                 if (ellip != null)
                 {
-                    panel[round].que.foo[cur_pos].Fill = ellip.Fill;
+                    panel[Round].que.foo[cur_pos].Fill = ellip.Fill;
 
                 }
                 cur_pos++;
@@ -87,7 +133,7 @@ namespace Find4
             {
                 if (ellip != null)
                 {
-                    panel[round].que.foo[cur_pos].Fill = ellip.Fill;
+                    panel[Round].que.foo[cur_pos].Fill = ellip.Fill;
 
                 }
                 if (check())
@@ -95,9 +141,9 @@ namespace Find4
                     win();
                 }
                 cur_pos = 0;
-                round++;
+                Round++;
             }
-            if (round == 6 && cur_pos == 0 && !Game_Over)
+            if (Round == 6 && cur_pos == 0 && !Game_Over)
             {
                 lose();
             }
@@ -114,7 +160,7 @@ namespace Find4
                 var brush1 = option.foo[i].Fill as SolidColorBrush;
                 if (brush1 != null)
                     col1 = brush1.Color;
-                var brush2 = panel[round].que.foo[i].Fill as SolidColorBrush;
+                var brush2 = panel[Round].que.foo[i].Fill as SolidColorBrush;
                 if (brush2 != null)
                     col2 = brush2.Color;
 
@@ -134,7 +180,7 @@ namespace Find4
 
                 for (int k = 0; k < listAns.Count; k++)
                 {
-                    var brush2 = panel[round].que.foo[listAns[k]].Fill as SolidColorBrush;
+                    var brush2 = panel[Round].que.foo[listAns[k]].Fill as SolidColorBrush;
                     if (brush2 != null)
                         col2 = brush2.Color;
                     if (col1 == col2)
@@ -149,11 +195,11 @@ namespace Find4
             int j;
             for (j = 0; j < black; j++)
             {
-                panel[round].ans.foo[j].Fill = color.black;
+                panel[Round].ans.foo[j].Fill = color.black;
             }
             for (int i = 0; i < white; i++)
             {
-                panel[round].ans.foo[j].Fill = color.white;
+                panel[Round].ans.foo[j].Fill = color.white;
                 j++;
             }
 
@@ -195,12 +241,14 @@ namespace Find4
                 op_text.Visibility = Visibility.Visible;
                 op.Visibility = Visibility.Visible;
                 undo.Visibility = Visibility.Collapsed;
+                select.Visibility = Visibility.Collapsed;
             }
             else
             {
                 op_text.Visibility = Visibility.Collapsed;
                 op.Visibility = Visibility.Collapsed;
                 undo.Visibility = Visibility.Visible;
+                select.Visibility = Visibility.Visible;
             }
         }
 
@@ -210,7 +258,7 @@ namespace Find4
                 return;
 
             cur_pos--;
-            panel[round].que.gray(cur_pos, cur_pos+1);
+            panel[Round].que.gray(cur_pos, cur_pos + 1);
         }
     }
 }

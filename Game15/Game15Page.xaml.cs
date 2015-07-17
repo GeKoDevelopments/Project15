@@ -7,13 +7,36 @@ namespace Game15
 {
     public sealed partial class Game15Page : Page
     {
-        public Tile[][] panel;
+        Tile[][] panel;
         string[] text;
         Point empty;
         Random rnd;
         int difficulty;
         int counter;
         bool game_over;
+
+        public bool Game_over
+        {
+            get
+            {
+                return game_over;
+            }
+
+            set
+            {
+                game_over = value;
+                if (game_over == true)
+                {
+                    shuffle.Visibility = Visibility.Visible;
+                    win_text.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    shuffle.Visibility = Visibility.Collapsed;
+                    win_text.Visibility = Visibility.Collapsed;
+                }
+            }
+        }
 
         public Game15Page()
         {
@@ -82,9 +105,8 @@ namespace Game15
 
         private void move(object sender, TappedRoutedEventArgs e)
         {
-            if (game_over) return;
+            if (Game_over) return;
 
-            panel[empty.X][empty.Y].set_visible(true);
             Grid gr = (Grid)sender;
             Point pos = null;
             for (int i = 0; i < 4; i++)
@@ -92,6 +114,9 @@ namespace Game15
                     if (panel[i][j].g == gr)
                         pos = new Point(i, j);
 
+            if ((pos.X != empty.X) ^ (pos.Y == empty.Y)) return;
+
+            panel[empty.X][empty.Y].set_visible(true);
             if (pos.X == empty.X)
             {
                 if (pos.Y < empty.Y)
@@ -124,8 +149,7 @@ namespace Game15
 
             if (check_win() == true)
             {
-                shuffle.Visibility = Visibility.Visible;
-                game_over = true;
+                Game_over = true;
             }
 
             panel[empty.X][empty.Y].set_visible(false);
@@ -134,33 +158,36 @@ namespace Game15
         private void Shuffle(object sender, RoutedEventArgs e)
         {
             Tile y;
-            game_over = false;
+            Game_over = false;
             shuffle.Visibility = Visibility.Collapsed;
-            for (int i = 0; i < difficulty; i++)
+            while (check_win() == true)
             {
-                int x = rnd.Next() % 3;
-                if (x >= empty.Y)
-                    x++;
+                for (int i = 0; i < difficulty; i++)
+                {
+                    int x = rnd.Next() % 3;
+                    if (x >= empty.Y)
+                        x++;
 
-                y = panel[empty.X][x];
-                move(y.g, null);
+                    y = panel[empty.X][x];
+                    move(y.g, null);
 
-                x = rnd.Next() % 3;
-                if (x >= empty.Y)
-                    x++;
+                    x = rnd.Next() % 3;
+                    if (x >= empty.Y)
+                        x++;
 
-                y = panel[x][empty.Y];
-                move(y.g, null);
-            }
-            if (empty.X != 3)
-            {
-                y = panel[3][empty.Y];
-                move(y.g, null);
-            }
-            if (empty.Y != 3)
-            {
-                y = panel[empty.X][3];
-                move(y.g, null);
+                    y = panel[x][empty.Y];
+                    move(y.g, null);
+                }
+                if (empty.X != 3)
+                {
+                    y = panel[3][empty.Y];
+                    move(y.g, null);
+                }
+                if (empty.Y != 3)
+                {
+                    y = panel[empty.X][3];
+                    move(y.g, null);
+                }
             }
             counter = 0;
             textBlock.Text = "Clicks: " + counter;

@@ -12,6 +12,9 @@
       <RootProperty Name="ColumnDefinitions" />
       <RootProperty Name="RowDefinitions" />
       <RootProperty Name="Margin" />
+      <RootProperty Name="IsDoubleTapEnabled" />
+      <RootProperty Name="IsHoldingEnabled" />
+      <RootProperty Name="IsRightTapEnabled" />
       <RootEvent Name="Tapped" />
       <RootMethod Name="GetColumn" />
       <RootMethod Name="SetColumn" />

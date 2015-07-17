@@ -6,7 +6,7 @@ namespace Find4
     {
         public SolidColorBrush red { get; }
         public SolidColorBrush orange { get; }
-        public SolidColorBrush yellow { get; }
+        public SolidColorBrush violet { get; }
         public SolidColorBrush indigo { get; }
         public SolidColorBrush blue { get; }
         public SolidColorBrush green { get; }
@@ -18,7 +18,7 @@ namespace Find4
         {
             red = new SolidColorBrush();
             orange = new SolidColorBrush();
-            yellow = new SolidColorBrush();
+            violet = new SolidColorBrush();
             indigo = new SolidColorBrush();
             blue = new SolidColorBrush();
             green = new SolidColorBrush();
@@ -28,7 +28,7 @@ namespace Find4
 
             red.Color = Windows.UI.Color.FromArgb(255, 255, 0, 0);
             orange.Color = Windows.UI.Color.FromArgb(255, 255, 165, 0);
-            yellow.Color = Windows.UI.Color.FromArgb(255, 255, 255, 0);
+            violet.Color = Windows.UI.Color.FromArgb(255, 238, 130, 238);
             indigo.Color = Windows.UI.Color.FromArgb(255, 75, 0, 130);
             blue.Color = Windows.UI.Color.FromArgb(255, 0, 0, 255);
             green.Color = Windows.UI.Color.FromArgb(255, 0, 128, 0);

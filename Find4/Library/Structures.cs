@@ -35,7 +35,7 @@ namespace Find4
                         e.Fill = col.indigo;
                         break;
                     case 4:
-                        e.Fill = col.yellow;
+                        e.Fill = col.violet;
                         break;
                     case 5:
                         e.Fill = col.blue;
