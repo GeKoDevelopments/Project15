@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="Black">
+    <Grid Background="#FFFFEFD4">
         <Grid.RowDefinitions>
             <RowDefinition Height="2*"/>
             <RowDefinition Height="3*"/>
@@ -16,10 +16,10 @@
         <Image x:Name="game_image" HorizontalAlignment="Center" VerticalAlignment="Center" Source="img/game15.png" Grid.Row="0" Margin="25"/>
 
         <StackPanel x:Name="selections" VerticalAlignment="Center" HorizontalAlignment="Center" Width="200" Grid.Row="1">
-            <Button x:Name="Play" Content="Play" Click="button_Click" HorizontalAlignment="Stretch" Height="100"/>
-            <Button x:Name="Instructions" Content="Instructions" Click="button_Click" HorizontalAlignment="Stretch" Height="100"/>
-            <Button x:Name="Credits" Content="Credits" Click="button_Click" HorizontalAlignment="Stretch" Height="100"/>
-            <Button x:Name="Exit" Content="Exit" Click="Exit_Click" HorizontalAlignment="Stretch" Height="100"/>
+            <Button x:Name="Play" Background="Peru" Content="Play" Click="button_Click" HorizontalAlignment="Stretch" Height="100" FontSize="30"/>
+            <Button x:Name="Instructions" Background="Peru" Content="Instructions" Click="button_Click" HorizontalAlignment="Stretch" Height="100" FontSize="30"/>
+            <Button x:Name="Credits" Background="Peru" Content="Credits" Click="button_Click" HorizontalAlignment="Stretch" Height="100" FontSize="30"/>
+            <Button x:Name="Exit" Background="Peru" Content="Exit" Click="Exit_Click" HorizontalAlignment="Stretch" Height="100" FontSize="30"/>
         </StackPanel>
     </Grid>
 </Page>

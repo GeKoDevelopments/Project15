@@ -7,11 +7,11 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="Black" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Tapped="Exit_Click">
+    <Grid Background="#FFFFEFD4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Tapped="Exit_Click">
         <StackPanel VerticalAlignment="Center">
-            <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Developed by:" VerticalAlignment="Center" FontSize="48"/>
-            <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Athanasopoulos Georgios" VerticalAlignment="Center" FontSize="48"/>
-            <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Karatsenidis Konstantinos" VerticalAlignment="Center" FontSize="48"/>
+            <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Developed by:" VerticalAlignment="Center" FontSize="48" Foreground="Black"/>
+            <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Athanasopoulos Georgios" VerticalAlignment="Center" FontSize="48" Foreground="Black"/>
+            <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Karatsenidis Konstantinos" VerticalAlignment="Center" FontSize="48" Foreground="Black"/>
         </StackPanel>
     </Grid>
 </Page>

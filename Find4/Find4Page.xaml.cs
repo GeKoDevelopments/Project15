@@ -209,6 +209,7 @@ namespace Find4
         private void win()
         {
             Game_Over = true;
+            Win.Play();
             wins++;
             textBlock.Text = "WINNER!!!";
             winscore.Text = "W:\t" + wins;
@@ -216,6 +217,7 @@ namespace Find4
         private void lose()
         {
             Game_Over = true;
+            Lose.Play();
             loses++;
             textBlock.Text = "LOSER";
             losescore.Text = "L:\t" + loses;
@@ -259,6 +261,20 @@ namespace Find4
 
             cur_pos--;
             panel[Round].que.gray(cur_pos, cur_pos + 1);
+        }
+
+        private void Mute_Checked(object sender, RoutedEventArgs e)
+        {
+            if ( (bool)Mute.IsChecked )
+            {
+                Win.Volume = 0;
+                Lose.Volume = 0;
+            }
+            else
+            {
+                Win.Volume = 0.5;
+                Lose.Volume = 0.5;
+            }
         }
     }
 }

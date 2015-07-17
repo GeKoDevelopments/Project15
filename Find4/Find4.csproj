@@ -71,7 +71,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="img\quess_color.jpg" />
+    <Content Include="Media\fail.mp3" />
+    <Content Include="Media\Ta Da.wav" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

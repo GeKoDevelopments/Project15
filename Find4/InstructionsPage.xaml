@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="Black" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Tapped="Exit_Click">
+    <Grid Background="DarkOliveGreen" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Tapped="Exit_Click">
         <StackPanel VerticalAlignment="Center">
             <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Guess the secret combination of colors." VerticalAlignment="Center" FontSize="48"/>
             <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="You have up to 6 tries.&#10;" VerticalAlignment="Center" FontSize="48"/>

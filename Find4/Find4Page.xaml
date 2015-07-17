@@ -13,7 +13,8 @@
             <ColumnDefinition Width="2*"/>
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
-
+        <MediaElement x:Name="Win" AudioCategory="GameEffects" Source="Media/Ta Da.wav" AutoPlay="False" />
+        <MediaElement x:Name="Lose" AudioCategory="GameEffects" Source="Media/fail.mp3" AutoPlay="False" />
         <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Column="0">
             <Grid.RowDefinitions>
                 <RowDefinition/>
@@ -21,8 +22,9 @@
             </Grid.RowDefinitions>
 
             <StackPanel Grid.Row="0" VerticalAlignment="Center">
-                <Button x:Name="button" Background="#FF6B2712" Content="Restart" HorizontalAlignment="Center" VerticalAlignment="Center" Height="50" Width="120" Click="Restart_Click"/>
-                <Button x:Name="undo" Background="#FF6B2712" Content="Undo" HorizontalAlignment="Center" VerticalAlignment="Center" Height="50" Width="120" Click="Undo_Click"/>
+                <Button x:Name="button" Background="#FF6B2712" Content="Restart" HorizontalAlignment="Center"  Height="50" Width="120" Click="Restart_Click" />
+                <CheckBox x:Name="Mute" Background="#FF6B2712"  Content="Mute" HorizontalAlignment="Center" Height="40" Width="110" Checked="Mute_Checked" Unchecked="Mute_Checked" BorderBrush="#FFFFFDFD" />
+                <Button x:Name="undo" Background="#FF6B2712" Content="Undo" HorizontalAlignment="Center" Height="50" Width="120" Click="Undo_Click"/>
             </StackPanel>
             <Button x:Name="Exit" Background="#FF6B2712" Content="Exit" HorizontalAlignment="Center" VerticalAlignment="Center" Height="50" Width="120" Click="Exit_Click" Grid.Row="1"/>
         </Grid>

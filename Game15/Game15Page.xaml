@@ -20,8 +20,8 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
 
-            <Button x:Name="shuffle" Content="Shuffle" Height="50" Width="120" Background="#FFFF8C8C" Click="Shuffle" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="0"/>
-            <Button x:Name="exit" Content="Exit" Height="50" Width="120" Background="#FF666666" Click="Exit" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="1"/>
+            <Button x:Name="shuffle" Content="Shuffle" Height="50" Width="120" Background="#FFFF8C8C" Click="Shuffle" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="0" />
+            <Button x:Name="exit" Content="Exit" Height="50" Width="120" Background="#FF666666" Click="Exit" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="1" />
         </Grid>
         <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Column="2">
             <Grid.RowDefinitions>
