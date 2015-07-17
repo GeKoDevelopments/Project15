@@ -7,19 +7,22 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="Black">
+    <Grid Background="DarkOliveGreen" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" >
         <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*"/>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1.5*"/>
         </Grid.RowDefinitions>
 
-        <Image x:Name="game_image" HorizontalAlignment="Center" VerticalAlignment="Center" Source="img/quess_color.jpg" Grid.Row="0" Margin="25"/>
+        <TextBlock Text="MASTERMIND"   Grid.Row="0" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="60" Foreground="Black" FontWeight="Bold" FontStyle="Italic" FontFamily="AR DARLING"  />
 
-        <StackPanel x:Name="selections" VerticalAlignment="Center" HorizontalAlignment="Center" Width="200" Grid.Row="1">
-            <Button x:Name="Play" Content="Play" HorizontalAlignment="Stretch" Click="button_Click" Height="100"/>
-            <Button x:Name="Instructions" Content="Instructions" HorizontalAlignment="Stretch" Height="100" Click="button_Click"/>
-            <Button x:Name="Credits" Content="Credits" HorizontalAlignment="Stretch" Height="100" Click="button_Click"/>
-            <Button x:Name="Exit" Content="Exit" HorizontalAlignment="Stretch" Click="Exit_Click" Height="100"/>
+        <Image x:Name="game_image" HorizontalAlignment="Center" VerticalAlignment="Center" Source="img/quess_color.jpg" Grid.Row="1" />
+
+        <StackPanel x:Name="selections" VerticalAlignment="Center" HorizontalAlignment="Center" Width="200" Grid.Row="2">
+            <Button x:Name="Play" Background="#FF6B2712" Content="Play" HorizontalAlignment="Stretch" Click="button_Click" Height="90" FontSize="30"/>
+            <Button x:Name="Instructions" Background="#FF6B2712" Content="Instructions" HorizontalAlignment="Stretch" Height="90" Click="button_Click" FontSize="30"/>
+            <Button x:Name="Credits" Background="#FF6B2712" Content="Credits" HorizontalAlignment="Stretch" Height="90" Click="button_Click" FontSize="30"/>
+            <Button x:Name="Exit" Background="#FF6B2712" Content="Exit" HorizontalAlignment="Stretch" Click="Exit_Click" Height="90" FontSize="30"/>
         </StackPanel>
     </Grid>
 </Page>

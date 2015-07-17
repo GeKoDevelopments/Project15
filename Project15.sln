@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Find4", "Find4\Find4.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Platform", "Platform\Platform.csproj", "{AACB2038-8155-458B-B2F1-032FA7F51DB1}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Games", "Games", "{D00CB934-0E79-44D2-A6F8-50853054CBC1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -80,5 +82,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{540ADF9F-E654-4F3F-BAF2-87DA4390BD2E} = {D00CB934-0E79-44D2-A6F8-50853054CBC1}
+		{C2049A11-0E90-4A79-A93D-30A934D38949} = {D00CB934-0E79-44D2-A6F8-50853054CBC1}
 	EndGlobalSection
 EndGlobal

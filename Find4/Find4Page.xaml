@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="Black">
+    <Grid Background="DarkOliveGreen">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="2*"/>
@@ -21,21 +21,21 @@
             </Grid.RowDefinitions>
 
             <StackPanel Grid.Row="0" VerticalAlignment="Center">
-                <Button x:Name="button" Content="Restart" HorizontalAlignment="Center" VerticalAlignment="Center" Height="50" Width="120" Click="Restart_Click"/>
-                <Button x:Name="undo" Content="Undo" HorizontalAlignment="Center" VerticalAlignment="Center" Height="50" Width="120" Click="Undo_Click"/>
+                <Button x:Name="button" Background="#FF6B2712" Content="Restart" HorizontalAlignment="Center" VerticalAlignment="Center" Height="50" Width="120" Click="Restart_Click"/>
+                <Button x:Name="undo" Background="#FF6B2712" Content="Undo" HorizontalAlignment="Center" VerticalAlignment="Center" Height="50" Width="120" Click="Undo_Click"/>
             </StackPanel>
-            <Button x:Name="Exit" Content="Exit" HorizontalAlignment="Center" VerticalAlignment="Center" Height="50" Width="120" Click="Exit_Click" Grid.Row="1"/>
+            <Button x:Name="Exit" Background="#FF6B2712" Content="Exit" HorizontalAlignment="Center" VerticalAlignment="Center" Height="50" Width="120" Click="Exit_Click" Grid.Row="1"/>
         </Grid>
-
         <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Column="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
                 <RowDefinition  Height="3*"/>
             </Grid.RowDefinitions>
-
-            <StackPanel VerticalAlignment="Center" Grid.Row="0">
-                <TextBlock x:Name="op_text" Text="The secret combination was: " HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="32"/>
-                <StackPanel x:Name="op" Orientation="Horizontal" HorizontalAlignment="Center">
+            <TextBlock Text="MASTERMIND"  Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="60" Foreground="Black" FontWeight="Bold" FontStyle="Italic" FontFamily="AR DARLING"  />
+            <StackPanel VerticalAlignment="Center" Grid.Row="1">
+                <TextBlock x:Name="op_text" Text="The secret combination was: " HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="32" />
+                <StackPanel x:Name="op"  Orientation="Horizontal" HorizontalAlignment="Center">
                     <Ellipse x:Name="op1" Fill="White" HorizontalAlignment="Center" Height="50" Width="50" Stroke="Black" VerticalAlignment="Center"/>
                     <Ellipse x:Name="op2" Fill="White" HorizontalAlignment="Center" Height="50" Width="50" Stroke="Black" VerticalAlignment="Center"/>
                     <Ellipse x:Name="op3" Fill="White" HorizontalAlignment="Center" Height="50" Width="50" Stroke="Black" VerticalAlignment="Center"/>
@@ -43,7 +43,7 @@
                 </StackPanel>
             </StackPanel>
 
-            <Grid VerticalAlignment="Center" HorizontalAlignment="Center" Background="#FF6B2712" Grid.Row="1">
+            <Grid VerticalAlignment="Center" HorizontalAlignment="Center" Background="#FF6B2712" Grid.Row="2">
                 <StackPanel>
                     <Rectangle x:Name="highlight6" Height="70" Stroke="Yellow" Width="300"/>
                     <Rectangle x:Name="highlight5" Height="70" Stroke="Yellow" Width="300"/>
