@@ -106,7 +106,8 @@ namespace Game15
         private void move(object sender, TappedRoutedEventArgs e)
         {
             if (Game_over) return;
-
+           // slide.Stop();
+            slide.Play();
             Grid gr = (Grid)sender;
             Point pos = null;
             for (int i = 0; i < 4; i++)

@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Windows.UI;
+using Windows.UI.Text;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Input;
@@ -45,28 +46,40 @@ namespace Find4
                 switch (round)
                 {
                     case 0:
-                        highlight6.Stroke.Opacity = 0;
-                        highlight1.Stroke.Opacity = 100;
+                        highlight6.FontWeight = FontWeights.Normal;
+                        highlight1.FontWeight = FontWeights.Bold;
+                        highlight6.Foreground = color.white;
+                        highlight1.Foreground = color.black;
                         break;
                     case 1:
-                        highlight1.Stroke.Opacity = 0;
-                        highlight2.Stroke.Opacity = 100;
+                        highlight1.FontWeight = FontWeights.Normal;
+                        highlight2.FontWeight = FontWeights.Bold;
+                        highlight1.Foreground = color.white;
+                        highlight2.Foreground = color.black;
                         break;
                     case 2:
-                        highlight2.Stroke.Opacity = 0;
-                        highlight3.Stroke.Opacity = 100;
+                        highlight2.FontWeight = FontWeights.Normal;
+                        highlight3.FontWeight = FontWeights.Bold;
+                        highlight2.Foreground = color.white;
+                        highlight3.Foreground = color.black;
                         break;
                     case 3:
-                        highlight3.Stroke.Opacity = 0;
-                        highlight4.Stroke.Opacity = 100;
+                        highlight3.FontWeight = FontWeights.Normal;
+                        highlight4.FontWeight = FontWeights.Bold;
+                        highlight3.Foreground = color.white;
+                        highlight4.Foreground = color.black;
                         break;
                     case 4:
-                        highlight4.Stroke.Opacity = 0;
-                        highlight5.Stroke.Opacity = 100;
+                        highlight4.FontWeight = FontWeights.Normal;
+                        highlight5.FontWeight = FontWeights.Bold;
+                        highlight4.Foreground = color.white;
+                        highlight5.Foreground = color.black;
                         break;
                     case 5:
-                        highlight5.Stroke.Opacity = 0;
-                        highlight6.Stroke.Opacity = 100;
+                        highlight5.FontWeight = FontWeights.Normal;
+                        highlight6.FontWeight = FontWeights.Bold;
+                        highlight5.Foreground = color.white;
+                        highlight6.Foreground = color.black;
                         break;
                 }
             }
@@ -97,12 +110,6 @@ namespace Find4
         }
         private void reset()
         {
-            highlight1.Stroke.Opacity = 0;
-            highlight2.Stroke.Opacity = 0;
-            highlight3.Stroke.Opacity = 0;
-            highlight4.Stroke.Opacity = 0;
-            highlight5.Stroke.Opacity = 0;
-            highlight6.Stroke.Opacity = 0;
             textBlock.Text = "";
             Game_Over = false;
             Round = 0;
@@ -272,8 +279,8 @@ namespace Find4
             }
             else
             {
-                Win.Volume = 0.5;
-                Lose.Volume = 0.5;
+                Win.Volume = 1;
+                Lose.Volume = 1;
             }
         }
     }

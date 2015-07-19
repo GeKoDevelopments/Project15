@@ -12,6 +12,7 @@
             <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Sort the numbers by moving them into position." VerticalAlignment="Center" FontSize="48" Foreground="Black"/>
             <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Use the blank space to move a row or a column." VerticalAlignment="Center" FontSize="48" Foreground="Black"/>
             <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Try to make as few moves as possible." VerticalAlignment="Center" FontSize="48" Foreground="Black"/>
+            <HyperlinkButton HorizontalAlignment="Center" NavigateUri="https://en.wikipedia.org/wiki/15_puzzle" Content="Wikipedia link" FontSize="48"/>
         </StackPanel>
     </Grid>
 </Page>

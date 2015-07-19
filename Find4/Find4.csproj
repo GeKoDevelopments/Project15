@@ -70,7 +70,7 @@
     <Compile Include="Library\Structures.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="img\quess_color.jpg" />
+    <Content Include="img\quess_color.png" />
     <Content Include="Media\fail.mp3" />
     <Content Include="Media\Ta Da.wav" />
   </ItemGroup>
