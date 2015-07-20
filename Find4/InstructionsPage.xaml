@@ -7,13 +7,16 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="#FF816636" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Tapped="Exit_Click">
+    <Grid  Tapped="Exit_Click">
+        <Grid.Background>
+            <ImageBrush x:Name="backgroundGrid" ImageSource="img/WoodFloor.jpg" />
+        </Grid.Background>
         <StackPanel VerticalAlignment="Center">
-            <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Guess the secret combination of colors." VerticalAlignment="Center" FontSize="48"/>
-            <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="You have up to 6 tries.&#10;" VerticalAlignment="Center" FontSize="48"/>
-            <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="• A black answer means you have guessed&#10;a correct color in the correct position.&#10;"  FontSize="48"/>
-            <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="• A white answer means you have guessed&#10;a correct color in the wrong position." FontSize="48"/>
-            <HyperlinkButton HorizontalAlignment="Center" NavigateUri="https://en.wikipedia.org/wiki/Mastermind_(board_game)" Content="Wikipedia link" FontSize="48"/>
+            <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Guess the secret combination of colors." VerticalAlignment="Center" FontSize="48" Foreground="Black"/>
+            <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="You have up to 6 tries.&#10;" VerticalAlignment="Center" FontSize="48" Foreground="Black"/>
+            <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="• A black answer means you have guessed&#10;a correct color in the correct position.&#10;"  FontSize="48" Foreground="Black"/>
+            <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="• A white answer means you have guessed&#10;a correct color in the wrong position." FontSize="48" Foreground="Black"/>
+            <HyperlinkButton HorizontalAlignment="Center" NavigateUri="https://en.wikipedia.org/wiki/Mastermind_(board_game)" Content="Wikipedia link" FontSize="48" Foreground="Blue"/>
         </StackPanel>
     </Grid>
 

@@ -71,7 +71,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="img\quess_color.png" />
+    <Content Include="img\MastermindLabel.png" />
+    <Content Include="img\WoodFloor.jpg" />
     <Content Include="Media\fail.mp3" />
+    <Content Include="Media\ButtonSound.mp3" />
     <Content Include="Media\Ta Da.wav" />
   </ItemGroup>
   <ItemGroup />
