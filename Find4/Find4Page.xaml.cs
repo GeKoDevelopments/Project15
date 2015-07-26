@@ -270,9 +270,9 @@ namespace Find4
             panel[Round].que.gray(cur_pos, cur_pos + 1);
         }
 
-        private void Mute_Checked(object sender, RoutedEventArgs e)
+        private void Mute_Toogled(object sender, RoutedEventArgs e)
         {
-            if ( (bool)Mute.IsChecked )
+            if ( toggleMute.IsOn )
             {
                 Win.Volume = 0;
                 Lose.Volume = 0;

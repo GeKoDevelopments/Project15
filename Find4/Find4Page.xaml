@@ -26,8 +26,8 @@
 
             <StackPanel Grid.Row="0" VerticalAlignment="Center">
                 <Button x:Name="button" Background="#FF6B2712" Content="Restart" HorizontalAlignment="Center"  Height="50" Width="120" Click="Restart_Click" Style="{StaticResource ButtonSkatouli}"/>
-                <Button x:Name="undo" Background="#FF6B2712" Content="Undo" HorizontalAlignment="Center" Height="50" Width="120" Click="Undo_Click" Style="{StaticResource ButtonSkatouli}"/>
-                <CheckBox x:Name="Mute" Content="Mute" HorizontalAlignment="Center" Tapped="Mute_Checked" IsDoubleTapEnabled="False"/>
+                <Button x:Name="undo"  Background="#FF6B2712" Content="Undo" HorizontalAlignment="Center" Height="50" Width="120" Click="Undo_Click"  Style="{StaticResource ButtonSkatouli}"/>
+                <ToggleSwitch x:Name="toggleMute" Header="Mute"  Background="#FF6B2712" HorizontalAlignment="Center" Toggled="Mute_Toogled" IsDoubleTapEnabled="False"  OnContent="&#x1f507;" OffContent="&#x1f50a;"  FontSize="40" />
             </StackPanel>
             <Button x:Name="Exit" Background="#FF6B2712" Content="Exit" HorizontalAlignment="Center" VerticalAlignment="Center" Height="50" Width="120" Click="Exit_Click" Grid.Row="1" Style="{StaticResource ButtonSkatouli}"/>
         </Grid>
@@ -37,7 +37,6 @@
                 <RowDefinition Height="1*"/>
                 <RowDefinition  Height="4*"/>
             </Grid.RowDefinitions>
-            <!--<TextBlock Text="MASTERMIND"  Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="60" Foreground="Black" FontWeight="Bold" FontStyle="Italic" FontFamily="AR DARLING"  /> -->
             <Image Source="img/MastermindLabel.png" HorizontalAlignment="Stretch"   Grid.Row="0" VerticalAlignment="Stretch"   />
             <StackPanel VerticalAlignment="Center" Grid.Row="1">
                 <TextBlock x:Name="op_text" Text="The secret combination was: " HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="32" />
