@@ -6,6 +6,88 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
+    <Page.Resources>
+        <Style x:Key="ButtonSkatouli" TargetType="Button">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <ImageBrush ImageSource="img/DarkWood.jpg" Stretch="UniformToFill"/>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Foreground" Value="{ThemeResource ButtonForegroundThemeBrush}"/>
+            <Setter Property="BorderBrush" Value="{ThemeResource ButtonBorderThemeBrush}"/>
+            <Setter Property="BorderThickness" Value="{ThemeResource ButtonBorderThemeThickness}"/>
+            <Setter Property="Padding" Value="12,4,12,4"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="FontFamily" Value="{ThemeResource ContentControlThemeFontFamily}"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="FontSize" Value="{ThemeResource ControlContentThemeFontSize}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal"/>
+                                    <VisualState x:Name="PointerOver">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="BorderBrush" Storyboard.TargetName="Border">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="Black"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Foreground" Storyboard.TargetName="ContentPresenter">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="Black"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Pressed">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="BorderBrush" Storyboard.TargetName="Border">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="Black"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Background" Storyboard.TargetName="Border">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="#00000000"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Foreground" Storyboard.TargetName="ContentPresenter">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="Black"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Disabled">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Background" Storyboard.TargetName="Border">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ButtonDisabledBackgroundThemeBrush}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="BorderBrush" Storyboard.TargetName="Border">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ButtonDisabledBorderThemeBrush}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Foreground" Storyboard.TargetName="ContentPresenter">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ButtonDisabledForegroundThemeBrush}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                </VisualStateGroup>
+                                <VisualStateGroup x:Name="FocusStates">
+                                    <VisualState x:Name="Focused">
+                                        <Storyboard>
+                                            <DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="FocusVisualWhite"/>
+                                            <DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="FocusVisualBlack"/>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Unfocused"/>
+                                    <VisualState x:Name="PointerFocused"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Border x:Name="Border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Margin="3">
+                                <ContentPresenter x:Name="ContentPresenter" AutomationProperties.AccessibilityView="Raw" ContentTemplate="{TemplateBinding ContentTemplate}" ContentTransitions="{TemplateBinding ContentTransitions}" Content="{TemplateBinding Content}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                            </Border>
+                            <Rectangle x:Name="FocusVisualWhite" IsHitTestVisible="False" Opacity="0" StrokeDashOffset="1.5" StrokeEndLineCap="Square" Stroke="{ThemeResource FocusVisualWhiteStrokeThemeBrush}" StrokeDashArray="1,1"/>
+                            <Rectangle x:Name="FocusVisualBlack" IsHitTestVisible="False" Opacity="0" StrokeDashOffset="0.5" StrokeEndLineCap="Square" Stroke="{ThemeResource FocusVisualBlackStrokeThemeBrush}" StrokeDashArray="1,1"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
 
     <Grid >
         <Grid.Background>
@@ -24,12 +106,12 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
 
-            <StackPanel Grid.Row="0" VerticalAlignment="Center">
-                <Button x:Name="button" Background="#FF6B2712" Content="Restart" HorizontalAlignment="Center"  Height="50" Width="120" Click="Restart_Click" Style="{StaticResource ButtonSkatouli}"/>
-                <Button x:Name="undo"  Background="#FF6B2712" Content="Undo" HorizontalAlignment="Center" Height="50" Width="120" Click="Undo_Click"  Style="{StaticResource ButtonSkatouli}"/>
-                <ToggleSwitch x:Name="toggleMute" Header="Mute"  Background="#FF6B2712" HorizontalAlignment="Center" Toggled="Mute_Toogled" IsDoubleTapEnabled="False"  OnContent="&#x1f507;" OffContent="&#x1f50a;"  FontSize="40" />
+            <StackPanel Grid.Row="0" Width="200" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Button x:Name="button" FontSize="30" Content="Restart" HorizontalAlignment="Stretch" Height="90" Click="Restart_Click" Style="{StaticResource ButtonSkatouli}"/>
+                <Button x:Name="undo" FontSize="30" Content="Undo" HorizontalAlignment="Stretch" Height="90" Click="Undo_Click" Style="{StaticResource ButtonSkatouli}"/>
+                <Button x:Name="MuteButton" FontSize="30" Tapped="Mute_Toogled" Content="&#x1f50a;" Height="90" HorizontalAlignment="Stretch" Style="{StaticResource ButtonSkatouli}"/>
             </StackPanel>
-            <Button x:Name="Exit" Background="#FF6B2712" Content="Exit" HorizontalAlignment="Center" VerticalAlignment="Center" Height="50" Width="120" Click="Exit_Click" Grid.Row="1" Style="{StaticResource ButtonSkatouli}"/>
+            <Button x:Name="Exit" Content="Exit" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Height="90" Width="200" Click="Exit_Click" Grid.Row="1" Style="{StaticResource ButtonSkatouli}"/>
         </Grid>
         <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Column="1">
             <Grid.RowDefinitions>
@@ -37,9 +119,9 @@
                 <RowDefinition Height="1*"/>
                 <RowDefinition  Height="4*"/>
             </Grid.RowDefinitions>
-            <Image Source="img/MastermindLabel.png" HorizontalAlignment="Stretch"   Grid.Row="0" VerticalAlignment="Stretch"   />
+            <Image Source="img/MastermindLabel.png" HorizontalAlignment="Center" Grid.Row="0" VerticalAlignment="Center" Height="100"/>
             <StackPanel VerticalAlignment="Center" Grid.Row="1">
-                <TextBlock x:Name="op_text" Text="The secret combination was: " HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="32" />
+                <TextBlock x:Name="op_text" Text="The secret combination was: " HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="30" />
                 <StackPanel x:Name="op" Orientation="Horizontal" HorizontalAlignment="Center">
                     <Ellipse x:Name="op1" Fill="White" HorizontalAlignment="Center" Height="50" Width="50" Stroke="Black" VerticalAlignment="Center"/>
                     <Ellipse x:Name="op2" Fill="White" HorizontalAlignment="Center" Height="50" Width="50" Stroke="Black" VerticalAlignment="Center"/>
@@ -48,8 +130,11 @@
                 </StackPanel>
             </StackPanel>
 
-            <Grid   VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Row="2">
-                <StackPanel  >
+            <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Row="2">
+                <StackPanel VerticalAlignment="Center">
+                    <StackPanel.Background>
+                        <ImageBrush ImageSource="img/board.png" Stretch="Uniform"/>
+                    </StackPanel.Background>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0, 10">
                         <TextBlock x:Name="highlight6" Text="6" FontSize="30" VerticalAlignment="Center"/>
                         <ItemsControl Margin="10, 0">
@@ -194,9 +279,9 @@
             </Grid.RowDefinitions>
 
             <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="0">
-                <TextBlock x:Name="textBlock" Text="TextBlock" FontSize="32"/>
-                <TextBlock x:Name="winscore" Text="W: 0" FontSize="32"/>
-                <TextBlock x:Name="losescore" Text="L: 0" FontSize="32"/>
+                <TextBlock x:Name="textBlock" Text="TextBlock" FontSize="30"/>
+                <TextBlock x:Name="winscore" Text="W: 0" FontSize="30"/>
+                <TextBlock x:Name="losescore" Text="L: 0" FontSize="30"/>
             </StackPanel>
             <StackPanel x:Name="select" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <TextBlock x:Name="textBlock1" TextWrapping="Wrap" Text="Select Color:" FontSize="32" HorizontalAlignment="Center"/>

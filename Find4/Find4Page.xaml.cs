@@ -12,6 +12,7 @@ namespace Find4
     public sealed partial class Find4Page : Page
     {
         private bool game_over;
+        private bool mute;
         private int round;
         private int cur_pos;
         private int wins;
@@ -97,6 +98,7 @@ namespace Find4
             loses = 0;
             winscore.Text = "W:\t" + wins;
             losescore.Text = "L:\t" + loses;
+            mute = false;
             color = new colors();
             option = new Block(op1, op2, op3, op4);
             panel = new ComboBlock[6];
@@ -272,15 +274,19 @@ namespace Find4
 
         private void Mute_Toogled(object sender, RoutedEventArgs e)
         {
-            if ( toggleMute.IsOn )
+            if (mute)
             {
-                Win.Volume = 0;
-                Lose.Volume = 0;
+                mute = false;
+                MuteButton.Content = "🔊";
+                Win.Volume = 1;
+                Lose.Volume = 1;
             }
             else
             {
-                Win.Volume = 1;
-                Lose.Volume = 1;
+                mute = true;
+                MuteButton.Content = "🔇";
+                Win.Volume = 0;
+                Lose.Volume = 0;
             }
         }
     }
