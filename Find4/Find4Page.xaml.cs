@@ -30,7 +30,7 @@ namespace Find4
             set
             {
                 game_over = value;
-                OptionVisible(game_over);
+                OptionVisible();
             }
         }
 
@@ -127,24 +127,18 @@ namespace Find4
         private void add_color(object sender, TappedRoutedEventArgs e)
         {
             if (Game_Over) return;
-
             Ellipse ellip = sender as Ellipse;
+            if (ellip == null) return;
+
+            But.Play();
             if (cur_pos < 3)
             {
-                if (ellip != null)
-                {
-                    panel[Round].que.foo[cur_pos].Fill = ellip.Fill;
-
-                }
+                panel[Round].que.foo[cur_pos].Fill = ellip.Fill;
                 cur_pos++;
             }
             else
             {
-                if (ellip != null)
-                {
-                    panel[Round].que.foo[cur_pos].Fill = ellip.Fill;
-
-                }
+                panel[Round].que.foo[cur_pos].Fill = ellip.Fill;
                 if (check())
                 {
                     win();
@@ -245,20 +239,20 @@ namespace Find4
             }
         }
 
-        public void OptionVisible(bool b)
+        public void OptionVisible()
         {
-            if (b)
+            if (Game_Over)
             {
                 op_text.Visibility = Visibility.Visible;
                 op.Visibility = Visibility.Visible;
-                undo.Visibility = Visibility.Collapsed;
+                undo.Opacity = 0;// Visibility = Visibility.Collapsed;
                 select.Visibility = Visibility.Collapsed;
             }
             else
             {
                 op_text.Visibility = Visibility.Collapsed;
                 op.Visibility = Visibility.Collapsed;
-                undo.Visibility = Visibility.Visible;
+                undo.Opacity = 100;// Visibility = Visibility.Visible;
                 select.Visibility = Visibility.Visible;
             }
         }
@@ -280,6 +274,7 @@ namespace Find4
                 MuteButton.Content = "🔊";
                 Win.Volume = 1;
                 Lose.Volume = 1;
+                But.Volume = 1;
             }
             else
             {
@@ -287,7 +282,17 @@ namespace Find4
                 MuteButton.Content = "🔇";
                 Win.Volume = 0;
                 Lose.Volume = 0;
+                But.Volume = 0;
             }
+        }
+
+        private void ButtonSound(object sender, PointerRoutedEventArgs e)
+        {
+            But.Play();
+        }
+        private void ButtonStop(object sender, PointerRoutedEventArgs e)
+        {
+            But.Stop();
         }
     }
 }

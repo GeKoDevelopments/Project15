@@ -70,6 +70,22 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="img\game15.png" />
+    <Content Include="img\mickey\1.jpg" />
+    <Content Include="img\mickey\10.jpg" />
+    <Content Include="img\mickey\11.jpg" />
+    <Content Include="img\mickey\12.jpg" />
+    <Content Include="img\mickey\13.jpg" />
+    <Content Include="img\mickey\14.jpg" />
+    <Content Include="img\mickey\15.jpg" />
+    <Content Include="img\mickey\16.jpg" />
+    <Content Include="img\mickey\2.jpg" />
+    <Content Include="img\mickey\3.jpg" />
+    <Content Include="img\mickey\4.jpg" />
+    <Content Include="img\mickey\5.jpg" />
+    <Content Include="img\mickey\6.jpg" />
+    <Content Include="img\mickey\7.jpg" />
+    <Content Include="img\mickey\8.jpg" />
+    <Content Include="img\mickey\9.jpg" />
     <Content Include="Media\asd.mp3" />
     <Content Include="Media\slide.mp3" />
   </ItemGroup>

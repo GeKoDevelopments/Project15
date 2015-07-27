@@ -99,16 +99,15 @@
             <RowDefinition Height="3*"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Text="MASTERMIND" Grid.Row="0" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="60" Foreground="Black" FontStyle="Italic" FontFamily="AR DARLING" FontWeight="Bold"/>
-
+        <MediaElement x:Name="But" AudioCategory="GameEffects" Source="Media/Rollover.mp3" AutoPlay="False"/>
+        
         <Image HorizontalAlignment="Center" VerticalAlignment="Center" Source="img/MastermindLabel.png" Height="100" Grid.Row="0"/>
         <Image HorizontalAlignment="Center" VerticalAlignment="Center" Source="img/quess_color.png" Grid.Row="1"/>
-
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="200" Grid.Row="2">
-            <Button x:Name="Play" Content="Play" HorizontalAlignment="Stretch" Click="button_Click" Height="90" FontSize="30" Style="{StaticResource ButtonSkatouli}"/>
-            <Button x:Name="Instructions" Content="Instructions" HorizontalAlignment="Stretch" Height="90" Click="button_Click" FontSize="30" Style="{StaticResource ButtonSkatouli}"/>
-            <Button x:Name="Credits" Content="Credits" HorizontalAlignment="Stretch" Height="90" Click="button_Click" FontSize="30" Style="{StaticResource ButtonSkatouli}"/>
-            <Button x:Name="Exit" Content="Exit" HorizontalAlignment="Stretch" Click="Exit_Click" Height="90" FontSize="30" Style="{StaticResource ButtonSkatouli}"/>
+            <Button x:Name="Play" Content="Play" HorizontalAlignment="Stretch" Click="button_Click" Height="90" FontSize="30" Style="{StaticResource ButtonSkatouli}" PointerEntered="ButtonSound" PointerExited="ButtonStop"/>
+            <Button x:Name="Instructions" Content="Instructions" HorizontalAlignment="Stretch" Height="90" Click="button_Click" FontSize="30" Style="{StaticResource ButtonSkatouli}" PointerEntered="ButtonSound" PointerExited="ButtonStop"/>
+            <Button x:Name="Credits" Content="Credits" HorizontalAlignment="Stretch" Height="90" Click="button_Click" FontSize="30" Style="{StaticResource ButtonSkatouli}" PointerEntered="ButtonSound" PointerExited="ButtonStop"/>
+            <Button x:Name="Exit" Content="Exit" HorizontalAlignment="Stretch" Click="Exit_Click" Height="90" FontSize="30" Style="{StaticResource ButtonSkatouli}" PointerEntered="ButtonSound" PointerExited="ButtonStop"/>
         </StackPanel>
     </Grid>
 </Page>

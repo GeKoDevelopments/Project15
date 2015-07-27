@@ -43,11 +43,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Find4_Resource.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Page>
     <Page Include="Find4_selection_display.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -82,6 +77,7 @@
     <Content Include="img\DarkWood.jpg" />
     <Content Include="Media\fail.mp3" />
     <Content Include="Media\ButtonSound.mp3" />
+    <Content Include="Media\Rollover.mp3" />
     <Content Include="Media\Ta Da.wav" />
   </ItemGroup>
   <ItemGroup />

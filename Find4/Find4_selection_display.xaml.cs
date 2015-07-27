@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Input;
 
 namespace Find4
 {
@@ -38,6 +39,15 @@ namespace Find4
             {
                 this.Frame.GoBack();
             }
+        }
+
+        private void ButtonSound(object sender, PointerRoutedEventArgs e)
+        {
+            But.Play();
+        }
+        private void ButtonStop(object sender, PointerRoutedEventArgs e)
+        {
+            But.Stop();
         }
     }
 }

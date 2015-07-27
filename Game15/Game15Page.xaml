@@ -21,7 +21,7 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
 
-            <Button x:Name="shuffle" Content="Shuffle" Height="50" Width="120" Background="Peru" Click="Shuffle" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="0" Style="{StaticResource ButtonPeru}"/>
+            <Button x:Name="ShuffleButton" Content="Shuffle" Height="50" Width="120" Background="Peru" Click="Shuffle" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="0" Style="{StaticResource ButtonPeru}"/>
             <Button x:Name="exit" Content="Exit" Height="50" Width="120" Background="Peru" Click="Exit" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="1" Style="{StaticResource ButtonPeru}"/>
         </Grid>
         <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Column="2">
@@ -34,84 +34,31 @@
                 <TextBlock x:Name="win_text" Text="Congratulations!" FontSize="32" Foreground="Black" HorizontalAlignment="Center" Visibility="Collapsed"/>
             </StackPanel>
         </Grid>
-        <Grid VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1">
-            <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-
-            <Grid x:Name="gr1" Margin="25" Grid.Row="0" Grid.Column="0" Tapped="move" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False">
-                <Rectangle x:Name="rec1" Height="100" Width="100" Fill="#FFFFC864"/>
-                <TextBlock x:Name="tex1" Height="50" Width="100" Foreground="Black" FontSize="48" TextAlignment="Center" Text="1"/>
-            </Grid>
-            <Grid x:Name="gr2" Margin="25" Grid.Row="0" Grid.Column="1" Tapped="move" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False">
-                <Rectangle x:Name="rec2" Height="100" Width="100" Fill="#FFFFC864"/>
-                <TextBlock x:Name="tex2" Height="50" Width="100" Foreground="Black" FontSize="48" TextAlignment="Center" Text="2"/>
-            </Grid>
-            <Grid x:Name="gr3" Margin="25" Grid.Row="0" Grid.Column="2" Tapped="move" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False">
-                <Rectangle x:Name="rec3" Height="100" Width="100" Fill="#FFFFC864"/>
-                <TextBlock x:Name="tex3" Height="50" Width="100" Foreground="Black" FontSize="48" TextAlignment="Center" Text="3"/>
-            </Grid>
-            <Grid x:Name="gr4" Margin="25" Grid.Row="0" Grid.Column="3" Tapped="move" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False">
-                <Rectangle x:Name="rec4" Height="100" Width="100" Fill="#FFFFC864"/>
-                <TextBlock x:Name="tex4" Height="50" Width="100" Foreground="Black" FontSize="48" TextAlignment="Center" Text="4"/>
-            </Grid>
-            <Grid x:Name="gr5" Margin="25" Grid.Row="1" Grid.Column="0" Tapped="move" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False">
-                <Rectangle x:Name="rec5" Height="100" Width="100" Fill="#FFFFC864"/>
-                <TextBlock x:Name="tex5" Height="50" Width="100" Foreground="Black" FontSize="48" TextAlignment="Center" Text="5"/>
-            </Grid>
-            <Grid x:Name="gr6" Margin="25" Grid.Row="1" Grid.Column="1" Tapped="move" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False">
-                <Rectangle x:Name="rec6" Height="100" Width="100" Fill="#FFFFC864"/>
-                <TextBlock x:Name="tex6" Height="50" Width="100" Foreground="Black" FontSize="48" TextAlignment="Center" Text="6"/>
-            </Grid>
-            <Grid x:Name="gr7" Margin="25" Grid.Row="1" Grid.Column="2" Tapped="move" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False">
-                <Rectangle x:Name="rec7" Height="100" Width="100" Fill="#FFFFC864"/>
-                <TextBlock x:Name="tex7" Height="50" Width="100" Foreground="Black" FontSize="48" TextAlignment="Center" Text="7"/>
-            </Grid>
-            <Grid x:Name="gr8" Margin="25" Grid.Row="1" Grid.Column="3" Tapped="move" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False">
-                <Rectangle x:Name="rec8" Height="100" Width="100" Fill="#FFFFC864"/>
-                <TextBlock x:Name="tex8" Height="50" Width="100" Foreground="Black" FontSize="48" TextAlignment="Center" Text="8"/>
-            </Grid>
-            <Grid x:Name="gr9" Margin="25" Grid.Row="2" Grid.Column="0" Tapped="move" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False">
-                <Rectangle x:Name="rec9" Height="100" Width="100" Fill="#FFFFC864"/>
-                <TextBlock x:Name="tex9" Height="50" Width="100" Foreground="Black" FontSize="48" TextAlignment="Center" Text="9"/>
-            </Grid>
-            <Grid x:Name="gr10" Margin="25" Grid.Row="2" Grid.Column="1" Tapped="move" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False">
-                <Rectangle x:Name="rec10" Height="100" Width="100" Fill="#FFFFC864"/>
-                <TextBlock x:Name="tex10" Height="50" Width="100" Foreground="Black" FontSize="48" TextAlignment="Center" Text="10"/>
-            </Grid>
-            <Grid x:Name="gr11" Margin="25" Grid.Row="2" Grid.Column="2" Tapped="move" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False">
-                <Rectangle x:Name="rec11" Height="100" Width="100" Fill="#FFFFC864"/>
-                <TextBlock x:Name="tex11" Height="50" Width="100" Foreground="Black" FontSize="48" TextAlignment="Center" Text="11"/>
-            </Grid>
-            <Grid x:Name="gr12" Margin="25" Grid.Row="2" Grid.Column="3" Tapped="move" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False">
-                <Rectangle x:Name="rec12" Height="100" Width="100" Fill="#FFFFC864"/>
-                <TextBlock x:Name="tex12" Height="50" Width="100" Foreground="Black" FontSize="48" TextAlignment="Center" Text="12"/>
-            </Grid>
-            <Grid x:Name="gr13" Margin="25" Grid.Row="3" Grid.Column="0" Tapped="move" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False">
-                <Rectangle x:Name="rec13" Height="100" Width="100" Fill="#FFFFC864"/>
-                <TextBlock x:Name="tex13" Height="50" Width="100" Foreground="Black" FontSize="48" TextAlignment="Center" Text="13"/>
-            </Grid>
-            <Grid x:Name="gr14" Margin="25" Grid.Row="3" Grid.Column="1" Tapped="move" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False">
-                <Rectangle x:Name="rec14" Height="100" Width="100" Fill="#FFFFC864"/>
-                <TextBlock x:Name="tex14" Height="50" Width="100" Foreground="Black" FontSize="48" TextAlignment="Center" Text="14"/>
-            </Grid>
-            <Grid x:Name="gr15" Margin="25" Grid.Row="3" Grid.Column="2" Tapped="move" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False">
-                <Rectangle x:Name="rec15" Height="100" Width="100" Fill="#FFFFC864"/>
-                <TextBlock x:Name="tex15" Height="50" Width="100" Foreground="Black" FontSize="48" TextAlignment="Center" Text="15"/>
-            </Grid>
-            <Grid x:Name="gr16" Margin="25" Grid.Row="3" Grid.Column="3" Tapped="move" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False">
-                <Rectangle x:Name="rec16" Height="100" Width="100" Fill="#FFFFC864" Visibility="Collapsed"/>
-                <TextBlock x:Name="tex16" Height="50" Width="100" Foreground="Black" FontSize="48" TextAlignment="Center"/>
-            </Grid>
-        </Grid>
+        <StackPanel Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel Orientation="Horizontal">
+                <Image x:Name="im1" Height="150" Tapped="move"/>
+                <Image x:Name="im2" Height="150" Tapped="move"/>
+                <Image x:Name="im3" Height="150" Tapped="move"/>
+                <Image x:Name="im4" Height="150" Tapped="move"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Image x:Name="im5" Height="150" Tapped="move"/>
+                <Image x:Name="im6" Height="150" Tapped="move"/>
+                <Image x:Name="im7" Height="150" Tapped="move"/>
+                <Image x:Name="im8" Height="150" Tapped="move"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Image x:Name="im9" Height="150" Tapped="move"/>
+                <Image x:Name="im10" Height="150" Tapped="move"/>
+                <Image x:Name="im11" Height="150" Tapped="move"/>
+                <Image x:Name="im12" Height="150" Tapped="move"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Image x:Name="im13" Height="150" Tapped="move"/>
+                <Image x:Name="im14" Height="150" Tapped="move"/>
+                <Image x:Name="im15" Height="150" Tapped="move"/>
+                <Image x:Name="im16" Height="150" Tapped="move"/>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Page>
