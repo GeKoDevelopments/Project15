@@ -1,8 +1,6 @@
 ﻿using System;
-using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media.Imaging;
-using Windows.UI.Xaml.Shapes;
 
 namespace Game15
 {
@@ -20,18 +18,14 @@ namespace Game15
     public class Tile
     {
         public Image i;
-        private string folder;
         public Point pos { get; }
         public int n { get; set; }
-        public Tile(Image im, string p, int nu)
+        public Tile(Image im, int nu)
         {
             i = im;
             n = nu;
             nu--;
             pos = new Point(nu / 4, nu % 4);
-            folder = p;
-            string path = "ms-appx:/Game15/img/" + folder + "/" + n + ".jpg";
-            i.Source = new BitmapImage(new Uri(path));
         }
         public void set_visible(bool b)
         {
@@ -51,7 +45,7 @@ namespace Game15
             i.Source = v;
         }
 
-        internal void update()
+        internal void update(string folder)
         {
             string path = "ms-appx:/Game15/img/" + folder + "/" + n + ".jpg";
             i.Source = new BitmapImage(new Uri(path));

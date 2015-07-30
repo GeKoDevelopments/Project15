@@ -14,15 +14,29 @@
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
 
-        <MediaElement x:Name="slide" Source="Media/asd.mp3" AudioCategory="GameEffects"/>
+        <MediaElement x:Name="slide" Source="Media/slide.mp3" AudioCategory="GameEffects" AutoPlay="False"/>
         <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Column="0">
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
 
-            <Button x:Name="ShuffleButton" Content="Shuffle" Height="50" Width="120" Background="Peru" Click="Shuffle" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="0" Style="{StaticResource ButtonPeru}"/>
-            <Button x:Name="exit" Content="Exit" Height="50" Width="120" Background="Peru" Click="Exit" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="1" Style="{StaticResource ButtonPeru}"/>
+            <StackPanel Grid.Column="0" VerticalAlignment="Center" Width="200">
+                <Button x:Name="ShuffleButton" Content="Shuffle" Height="90" Background="Peru" Click="Shuffle" HorizontalAlignment="Stretch" Grid.Row="0" Style="{StaticResource ButtonPeru}"/>
+                <Button x:Name="Select" Content="Select" Height="90" Background="Peru" Click="SelectButton" HorizontalAlignment="Stretch" Grid.Row="0" Style="{StaticResource ButtonPeru}"/>
+
+                <ScrollViewer x:Name="options" MaxHeight="200">
+                    <StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0 10">
+                            <Image Source="img/numbers/numbers.jpg" Width="50" Tapped="Selected" HorizontalAlignment="Center" Margin="0 0 25 0"/>
+                            <Image Source="img/mickey/mickey.jpg" Width="50" Tapped="Selected" HorizontalAlignment="Center" Margin="0 0 0 0"/>
+                            <Image  Width="50" HorizontalAlignment="Center" Margin="25 0 0 0"/>
+                        </StackPanel>
+                    </StackPanel>
+                </ScrollViewer>
+            </StackPanel>
+            <Button x:Name="exit" Content="Exit" Height="90" Width="200" Background="Peru" Click="Exit" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="1" Style="{StaticResource ButtonPeru}"/>
+
         </Grid>
         <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Column="2">
             <Grid.RowDefinitions>
@@ -36,28 +50,60 @@
         </Grid>
         <StackPanel Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
             <StackPanel Orientation="Horizontal">
-                <Image x:Name="im1" Height="150" Tapped="move"/>
-                <Image x:Name="im2" Height="150" Tapped="move"/>
-                <Image x:Name="im3" Height="150" Tapped="move"/>
-                <Image x:Name="im4" Height="150" Tapped="move"/>
+                <Border x:Name="b1" Height="150" Width="150" BorderBrush="Black" BorderThickness="1">
+                    <Image x:Name="im1" Tapped="move"/>
+                </Border>
+                <Border x:Name="b2" Height="150" Width="150" BorderBrush="Black" BorderThickness="1">
+                    <Image x:Name="im2" Tapped="move"/>
+                </Border>
+                <Border x:Name="b3" Height="150" Width="150" BorderBrush="Black" BorderThickness="1">
+                    <Image x:Name="im3" Tapped="move"/>
+                </Border>
+                <Border x:Name="b4" Height="150" Width="150" BorderBrush="Black" BorderThickness="1">
+                    <Image x:Name="im4" Tapped="move"/>
+                </Border>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
-                <Image x:Name="im5" Height="150" Tapped="move"/>
-                <Image x:Name="im6" Height="150" Tapped="move"/>
-                <Image x:Name="im7" Height="150" Tapped="move"/>
-                <Image x:Name="im8" Height="150" Tapped="move"/>
+                <Border x:Name="b5" Height="150" Width="150" BorderBrush="Black" BorderThickness="1">
+                    <Image x:Name="im5" Tapped="move"/>
+                </Border>
+                <Border x:Name="b6" Height="150" Width="150" BorderBrush="Black" BorderThickness="1">
+                    <Image x:Name="im6" Tapped="move"/>
+                </Border>
+                <Border x:Name="b7" Height="150" Width="150" BorderBrush="Black" BorderThickness="1">
+                    <Image x:Name="im7" Tapped="move"/>
+                </Border>
+                <Border x:Name="b8" Height="150" Width="150" BorderBrush="Black" BorderThickness="1">
+                    <Image x:Name="im8" Tapped="move"/>
+                </Border>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
-                <Image x:Name="im9" Height="150" Tapped="move"/>
-                <Image x:Name="im10" Height="150" Tapped="move"/>
-                <Image x:Name="im11" Height="150" Tapped="move"/>
-                <Image x:Name="im12" Height="150" Tapped="move"/>
+                <Border x:Name="b9" Height="150" Width="150" BorderBrush="Black" BorderThickness="1">
+                    <Image x:Name="im9" Tapped="move"/>
+                </Border>
+                <Border x:Name="b10" Height="150" Width="150" BorderBrush="Black" BorderThickness="1">
+                    <Image x:Name="im10" Tapped="move"/>
+                </Border>
+                <Border x:Name="b11" Height="150" Width="150" BorderBrush="Black" BorderThickness="1">
+                    <Image x:Name="im11" Tapped="move"/>
+                </Border>
+                <Border x:Name="b12" Height="150" Width="150" BorderBrush="Black" BorderThickness="1">
+                    <Image x:Name="im12" Tapped="move"/>
+                </Border>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
-                <Image x:Name="im13" Height="150" Tapped="move"/>
-                <Image x:Name="im14" Height="150" Tapped="move"/>
-                <Image x:Name="im15" Height="150" Tapped="move"/>
-                <Image x:Name="im16" Height="150" Tapped="move"/>
+                <Border x:Name="b13" Height="150" Width="150" BorderBrush="Black" BorderThickness="1">
+                    <Image x:Name="im13" Tapped="move"/>
+                </Border>
+                <Border x:Name="b14" Height="150" Width="150" BorderBrush="Black" BorderThickness="1">
+                    <Image x:Name="im14" Tapped="move"/>
+                </Border>
+                <Border x:Name="b15" Height="150" Width="150" BorderBrush="Black" BorderThickness="1">
+                    <Image x:Name="im15" Tapped="move"/>
+                </Border>
+                <Border x:Name="b16" Height="150" Width="150" BorderBrush="Black" BorderThickness="1">
+                    <Image x:Name="im16" Tapped="move"/>
+                </Border>
             </StackPanel>
         </StackPanel>
     </Grid>

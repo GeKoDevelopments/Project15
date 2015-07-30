@@ -13,11 +13,11 @@
             <ColumnDefinition Width="2*"/>
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
-        <ScrollViewer HorizontalAlignment="Left" VerticalAlignment="Center" Width="250">
+        <ScrollViewer HorizontalAlignment="Center" VerticalAlignment="Center" Width="200">
             <StackPanel>
-                <Button x:Name="Game15" Background="Brown" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="60" Content="Game15" Click="button_Click"/>
-                <Button x:Name="Find4" Background="Brown" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="60" Content="Mastermind" Click="button_Click"/>
-                <Button x:Name="Credits" Background="Brown" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="60" Content="Credits" Click="button_Click"/>
+                <Button x:Name="Game15" Background="Brown" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="90" Content="Game15" Click="button_Click"/>
+                <Button x:Name="Find4" Background="Brown" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="90" Content="Mastermind" Click="button_Click"/>
+                <Button x:Name="Credits" Background="Brown" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="90" Content="Credits" Click="button_Click"/>
             </StackPanel>
         </ScrollViewer>
         <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Column="1">
@@ -25,11 +25,10 @@
                 <RowDefinition Height="1*"/>
                 <RowDefinition Height="3*"/>
             </Grid.RowDefinitions>
-            <StackPanel Background="Brown" HorizontalAlignment="Stretch"  VerticalAlignment="Center"   Grid.Row="0"  >
+            <StackPanel Background="Brown" HorizontalAlignment="Stretch"  VerticalAlignment="Center"   Grid.Row="0">
                 <TextBlock x:Name="textBlock" TextWrapping="Wrap" Text="Platform" FontSize="60" HorizontalAlignment="Center" FontWeight="Bold" FontStyle="Italic" FontFamily="AR BERKLEY"/>
                 <TextBlock x:Name="textBlock1" TextWrapping="Wrap" Text="Games" FontSize="60" HorizontalAlignment="Center" FontWeight="Bold" FontStyle="Italic" FontFamily="AR BERKLEY"/>
             </StackPanel>
-
         </Grid>
     </Grid>
 </Page>

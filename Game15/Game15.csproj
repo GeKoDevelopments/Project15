@@ -69,6 +69,7 @@
     <Compile Include="Structures.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="img\board.png" />
     <Content Include="img\game15.png" />
     <Content Include="img\mickey\1.jpg" />
     <Content Include="img\mickey\10.jpg" />
@@ -86,8 +87,26 @@
     <Content Include="img\mickey\7.jpg" />
     <Content Include="img\mickey\8.jpg" />
     <Content Include="img\mickey\9.jpg" />
+    <Content Include="img\numbers\numbers.jpg" />
+    <Content Include="img\numbers\1.jpg" />
+    <Content Include="img\numbers\10.jpg" />
+    <Content Include="img\numbers\11.jpg" />
+    <Content Include="img\numbers\12.jpg" />
+    <Content Include="img\numbers\13.jpg" />
+    <Content Include="img\numbers\14.jpg" />
+    <Content Include="img\numbers\15.jpg" />
+    <Content Include="img\numbers\16.jpg" />
+    <Content Include="img\numbers\2.jpg" />
+    <Content Include="img\numbers\3.jpg" />
+    <Content Include="img\numbers\5.jpg" />
+    <Content Include="img\numbers\6.jpg" />
+    <Content Include="img\numbers\7.jpg" />
+    <Content Include="img\numbers\8.jpg" />
+    <Content Include="img\numbers\9.jpg" />
+    <Content Include="img\numbers\4.jpg" />
     <Content Include="Media\asd.mp3" />
     <Content Include="Media\slide.mp3" />
+    <Content Include="img\mickey\mickey.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
