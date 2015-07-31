@@ -76,7 +76,6 @@
     <Content Include="img\WoodFloor.jpg" />
     <Content Include="img\DarkWood.jpg" />
     <Content Include="Media\fail.mp3" />
-    <Content Include="Media\ButtonSound.mp3" />
     <Content Include="Media\Rollover.mp3" />
     <Content Include="Media\Ta Da.wav" />
   </ItemGroup>

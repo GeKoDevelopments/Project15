@@ -69,7 +69,24 @@
     <Compile Include="Structures.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="img\board.png" />
+    <Content Include="img\background.jpg" />
+    <Content Include="img\donald\1.jpg" />
+    <Content Include="img\donald\10.jpg" />
+    <Content Include="img\donald\11.jpg" />
+    <Content Include="img\donald\12.jpg" />
+    <Content Include="img\donald\13.jpg" />
+    <Content Include="img\donald\14.jpg" />
+    <Content Include="img\donald\15.jpg" />
+    <Content Include="img\donald\16.jpg" />
+    <Content Include="img\donald\2.jpg" />
+    <Content Include="img\donald\3.jpg" />
+    <Content Include="img\donald\4.jpg" />
+    <Content Include="img\donald\5.jpg" />
+    <Content Include="img\donald\6.jpg" />
+    <Content Include="img\donald\7.jpg" />
+    <Content Include="img\donald\8.jpg" />
+    <Content Include="img\donald\9.jpg" />
+    <Content Include="img\donald\donald.jpg" />
     <Content Include="img\game15.png" />
     <Content Include="img\mickey\1.jpg" />
     <Content Include="img\mickey\10.jpg" />
@@ -104,10 +121,29 @@
     <Content Include="img\numbers\8.jpg" />
     <Content Include="img\numbers\9.jpg" />
     <Content Include="img\numbers\4.jpg" />
+    <Content Include="img\pikachu\1.jpg" />
+    <Content Include="img\pikachu\10.jpg" />
+    <Content Include="img\pikachu\11.jpg" />
+    <Content Include="img\pikachu\12.jpg" />
+    <Content Include="img\pikachu\13.jpg" />
+    <Content Include="img\pikachu\14.jpg" />
+    <Content Include="img\pikachu\15.jpg" />
+    <Content Include="img\pikachu\16.jpg" />
+    <Content Include="img\pikachu\2.jpg" />
+    <Content Include="img\pikachu\3.jpg" />
+    <Content Include="img\pikachu\4.jpg" />
+    <Content Include="img\pikachu\5.jpg" />
+    <Content Include="img\pikachu\6.jpg" />
+    <Content Include="img\pikachu\7.jpg" />
+    <Content Include="img\pikachu\8.jpg" />
+    <Content Include="img\pikachu\9.jpg" />
+    <Content Include="img\pikachu\pikachu.jpg" />
     <Content Include="Media\asd.mp3" />
     <Content Include="Media\slide.mp3" />
     <Content Include="img\mickey\mickey.jpg" />
+    <Content Include="Media\Windswept.mp3" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

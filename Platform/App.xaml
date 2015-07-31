@@ -5,7 +5,7 @@
     xmlns:local="using:Platform">
     <Application.Resources>
         <Style x:Key="ButtonPeru" TargetType="Button">
-            <Setter Property="Background" Value="{ThemeResource ButtonBackgroundThemeBrush}"/>
+            <Setter Property="Background" Value="Peru"/>
             <Setter Property="Foreground" Value="{ThemeResource ButtonForegroundThemeBrush}"/>
             <Setter Property="BorderBrush" Value="{ThemeResource ButtonBorderThemeBrush}"/>
             <Setter Property="BorderThickness" Value="{ThemeResource ButtonBorderThemeThickness}"/>

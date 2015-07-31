@@ -50,5 +50,10 @@ namespace Game15
             string path = "ms-appx:/Game15/img/" + folder + "/" + n + ".jpg";
             i.Source = new BitmapImage(new Uri(path));
         }
+
+        internal bool check()
+        {
+            return n == pos.pos() + 1;
+        }
     }
 }

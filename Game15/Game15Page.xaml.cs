@@ -19,7 +19,25 @@ namespace Game15
         bool game_over;
         bool shuffle;
 
-        
+        void BorderVisible(int i)
+        {
+            b1.BorderThickness = new Thickness(i);
+            b2.BorderThickness = new Thickness(i);
+            b3.BorderThickness = new Thickness(i);
+            b4.BorderThickness = new Thickness(i);
+            b5.BorderThickness = new Thickness(i);
+            b6.BorderThickness = new Thickness(i);
+            b7.BorderThickness = new Thickness(i);
+            b8.BorderThickness = new Thickness(i);
+            b9.BorderThickness = new Thickness(i);
+            b10.BorderThickness = new Thickness(i);
+            b11.BorderThickness = new Thickness(i);
+            b12.BorderThickness = new Thickness(i);
+            b13.BorderThickness = new Thickness(i);
+            b14.BorderThickness = new Thickness(i);
+            b15.BorderThickness = new Thickness(i);
+            b16.BorderThickness = new Thickness(i);
+        }
 
         public bool Game_over
         {
@@ -33,52 +51,20 @@ namespace Game15
                 game_over = value;
                 if (game_over == true)
                 {
-                    b1.BorderThickness = new Thickness(0);
-                    b2.BorderThickness = new Thickness(0);
-                    b3.BorderThickness = new Thickness(0);
-                    b4.BorderThickness = new Thickness(0);
-                    b5.BorderThickness = new Thickness(0);
-                    b6.BorderThickness = new Thickness(0);
-                    b7.BorderThickness = new Thickness(0);
-                    b8.BorderThickness = new Thickness(0);
-                    b9.BorderThickness = new Thickness(0);
-                    b10.BorderThickness = new Thickness(0);
-                    b11.BorderThickness = new Thickness(0);
-                    b12.BorderThickness = new Thickness(0);
-                    b13.BorderThickness = new Thickness(0);
-                    b14.BorderThickness = new Thickness(0);
-                    b15.BorderThickness = new Thickness(0);
-                    b16.BorderThickness = new Thickness(0);
-                    ShuffleButton.Visibility = Visibility.Visible;
+                    BorderVisible(0);
+                    options.Visibility = Visibility.Visible;
                     win_text.Visibility = Visibility.Visible;
                     panel[empty.pos()].set_visible(true);
-                    Select.Visibility = Visibility.Visible;
                     //im16.Opacity = 100;
                 }
                 else
                 {
-                    b1.BorderThickness = new Thickness(1);
-                    b2.BorderThickness = new Thickness(1);
-                    b3.BorderThickness = new Thickness(1);
-                    b4.BorderThickness = new Thickness(1);
-                    b5.BorderThickness = new Thickness(1);
-                    b6.BorderThickness = new Thickness(1);
-                    b7.BorderThickness = new Thickness(1);
-                    b8.BorderThickness = new Thickness(1);
-                    b9.BorderThickness = new Thickness(1);
-                    b10.BorderThickness = new Thickness(1);
-                    b11.BorderThickness = new Thickness(1);
-                    b12.BorderThickness = new Thickness(1);
-                    b13.BorderThickness = new Thickness(1);
-                    b14.BorderThickness = new Thickness(1);
-                    b15.BorderThickness = new Thickness(1);
-                    b16.BorderThickness = new Thickness(1);
+                    BorderVisible(1);
                     counter = 0;
                     textBlock.Text = "Clicks: " + counter;
-                    ShuffleButton.Visibility = Visibility.Collapsed;
+                    options.Visibility = Visibility.Collapsed;
                     win_text.Visibility = Visibility.Collapsed;
                     panel[empty.pos()].set_visible(false);
-                    Select.Visibility = Visibility.Collapsed;
                 }
             }
         }
@@ -91,13 +77,11 @@ namespace Game15
 
         public void initialize()
         {
-            options.Height = options.Width;
             rnd = new Random();
             empty = new Point(3, 3);
             difficulty = 15;
-            options.Visibility = Visibility.Collapsed;
             shuffle = false;
-            
+
             panel = new Tile[16];
 
             pan = new Dictionary<Image, Tile>();
@@ -167,6 +151,7 @@ namespace Game15
 
             if (!shuffle)
             {
+                slide.Stop();
                 slide.Play();
             }
 
@@ -217,12 +202,11 @@ namespace Game15
             Point x;
             Game_over = false;
             shuffle = true;
-            ShuffleButton.Visibility = Visibility.Collapsed;
             while (check_win() == true)
             {
                 for (int i = 0; i < difficulty; i++)
                 {
-                    int r = rnd.Next() % 3;
+                    int r = rnd.Next(3);
                     if (r >= empty.Y)
                         r++;
 
@@ -230,7 +214,7 @@ namespace Game15
                     y = panel[x.pos()];
                     move(y.i, null);
 
-                    r = rnd.Next() % 3;
+                    r = rnd.Next(3);
                     if (r >= empty.Y)
                         r++;
 
@@ -256,25 +240,14 @@ namespace Game15
 
         private Boolean check_win()
         {
-            if (panel[15].n != 16)
+            if (panel[15].check() == false)
                 return false;
 
-            return (panel[0].n == 1
-                 && panel[1].n == 2
-                 && panel[2].n == 3
-                 && panel[3].n == 4
-                 && panel[4].n == 5
-                 && panel[5].n == 6
-                 && panel[6].n == 7
-                 && panel[7].n == 8
-                 && panel[8].n == 9
-                 && panel[9].n == 10
-                 && panel[10].n == 11
-                 && panel[11].n == 12
-                 && panel[12].n == 13
-                 && panel[13].n == 14
-                 && panel[14].n == 15
-            );
+            foreach (Tile t in panel)
+                if (t.check() == false)
+                    return false;
+
+            return true;
         }
 
         private void Exit(object sender, RoutedEventArgs e)
@@ -284,20 +257,12 @@ namespace Game15
                 this.Frame.GoBack();
             }
         }
-        
-        private void SelectButton(object sender, RoutedEventArgs e)
-        {
-            options.Visibility = Visibility.Visible;
-            Select.Visibility = Visibility.Collapsed;
-        }
 
         private void Selected(object sender, TappedRoutedEventArgs e)
         {
             string path = ((BitmapImage)((Image)sender).Source).UriSource.ToString();
             string[] s = path.Split('/');
             folder = s[3];
-            options.Visibility = Visibility.Collapsed;
-            Select.Visibility = Visibility.Visible;
 
             foreach (Tile m in panel)
                 m.update(folder);

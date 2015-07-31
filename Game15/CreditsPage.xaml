@@ -7,11 +7,15 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="#FFFFEFD4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Tapped="Exit_Click">
+    <Grid Tapped="Exit_Click">
+        <Grid.Background>
+            <ImageBrush ImageSource="img/background.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
         <StackPanel VerticalAlignment="Center">
             <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Developed by:" VerticalAlignment="Center" FontSize="48" Foreground="Black"/>
             <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Athanasopoulos Georgios" VerticalAlignment="Center" FontSize="48" Foreground="Black"/>
             <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Karatsenidis Konstantinos" VerticalAlignment="Center" FontSize="48" Foreground="Black"/>
+            <HyperlinkButton HorizontalAlignment="Center" NavigateUri="http://www.orangefreesounds.com/windswept-synth-guitar-and-soft-strings/" Content="Song" FontSize="48" Foreground="Blue"/>
         </StackPanel>
     </Grid>
 </Page>

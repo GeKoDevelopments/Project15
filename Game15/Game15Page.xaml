@@ -7,7 +7,10 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="#FFFFEFD4">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="img/background.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="2*"/>
@@ -15,29 +18,48 @@
         </Grid.ColumnDefinitions>
 
         <MediaElement x:Name="slide" Source="Media/slide.mp3" AudioCategory="GameEffects" AutoPlay="False"/>
+        <MediaElement x:Name="background" Source="Media/Windswept.mp3" AudioCategory="GameEffects" IsLooping="True"/>
         <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Column="0">
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
 
-            <StackPanel Grid.Column="0" VerticalAlignment="Center" Width="200">
-                <Button x:Name="ShuffleButton" Content="Shuffle" Height="90" Background="Peru" Click="Shuffle" HorizontalAlignment="Stretch" Grid.Row="0" Style="{StaticResource ButtonPeru}"/>
-                <Button x:Name="Select" Content="Select" Height="90" Background="Peru" Click="SelectButton" HorizontalAlignment="Stretch" Grid.Row="0" Style="{StaticResource ButtonPeru}"/>
+            <StackPanel x:Name="options" Grid.Column="0" VerticalAlignment="Center" Width="200">
+                <Button x:Name="ShuffleButton" Content="Shuffle" Height="90" Click="Shuffle" HorizontalAlignment="Stretch" Style="{StaticResource ButtonPeru}"/>
 
-                <ScrollViewer x:Name="options" MaxHeight="200">
-                    <StackPanel>
-                        <StackPanel Orientation="Horizontal" Margin="0 10">
-                            <Image Source="img/numbers/numbers.jpg" Width="50" Tapped="Selected" HorizontalAlignment="Center" Margin="0 0 25 0"/>
-                            <Image Source="img/mickey/mickey.jpg" Width="50" Tapped="Selected" HorizontalAlignment="Center" Margin="0 0 0 0"/>
-                            <Image  Width="50" HorizontalAlignment="Center" Margin="25 0 0 0"/>
-                        </StackPanel>
-                    </StackPanel>
-                </ScrollViewer>
+                <TextBlock Text="Select image:" HorizontalAlignment="Center" FontSize="32" Foreground="Black"/>
+                <!--<ScrollViewer VerticalAlignment="Center">-->
+                <ItemsControl HorizontalAlignment="Center">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapGrid MaximumRowsOrColumns="3" Orientation="Horizontal"/>
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                    <ItemsControl.Items>
+                        <Grid  Width="60" Height="60">
+                            <Image Source="img/numbers/numbers.jpg" Width="50" Height="50" Tapped="Selected"/>
+                        </Grid>
+                        <Grid  Width="60" Height="60">
+                            <Image Source="img/mickey/mickey.jpg" Width="50" Height="50" Tapped="Selected"/>
+                        </Grid>
+                        <Grid  Width="60" Height="60">
+                            <Image Source="img/donald/donald.jpg" Width="50" Height="50" Tapped="Selected"/>
+                        </Grid>
+                        <Grid  Width="60" Height="60">
+                            <Image Source="img/pikachu/pikachu.jpg" Width="50" Height="50" Tapped="Selected"/>
+                        </Grid>
+                    </ItemsControl.Items>
+                </ItemsControl>
+                <!--</ScrollViewer>-->
             </StackPanel>
-            <Button x:Name="exit" Content="Exit" Height="90" Width="200" Background="Peru" Click="Exit" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="1" Style="{StaticResource ButtonPeru}"/>
 
+            <StackPanel Grid.Row="1" Width="200" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Button x:Name="MuteButton" Tapped="Mute_Toogled" Content="&#x1f50a;" Height="90" HorizontalAlignment="Stretch" Style="{StaticResource ButtonPeru}"/>
+                <Button x:Name="exit" Content="Exit" Height="90" Click="Exit" HorizontalAlignment="Stretch" Style="{StaticResource ButtonPeru}"/>
+            </StackPanel>
         </Grid>
+
         <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Column="2">
             <Grid.RowDefinitions>
                 <RowDefinition/>

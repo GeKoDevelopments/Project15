@@ -7,7 +7,10 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="#FFFFEFD4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Tapped="Exit_Click">
+    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Tapped="Exit_Click">
+        <Grid.Background>
+            <ImageBrush ImageSource="img/background.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
         <StackPanel VerticalAlignment="Center">
             <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Sort the numbers by moving them into position." VerticalAlignment="Center" FontSize="48" Foreground="Black"/>
             <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Use the blank space to move a row or a column." VerticalAlignment="Center" FontSize="48" Foreground="Black"/>
