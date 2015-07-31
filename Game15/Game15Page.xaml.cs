@@ -18,6 +18,7 @@ namespace Game15
         int counter;
         bool game_over;
         bool shuffle;
+        bool mute;
 
         void BorderVisible(int i)
         {
@@ -81,6 +82,7 @@ namespace Game15
             empty = new Point(3, 3);
             difficulty = 15;
             shuffle = false;
+            mute = false;
 
             panel = new Tile[16];
 
@@ -266,6 +268,21 @@ namespace Game15
 
             foreach (Tile m in panel)
                 m.update(folder);
+        }
+        private void Mute_Toogled(object sender, RoutedEventArgs e)
+        {
+            if (mute)
+            {
+                mute = false;
+                MuteButton.Content = "🔊";
+                background.Volume = 1;
+            }
+            else
+            {
+                mute = true;
+                MuteButton.Content = "🔇";
+                background.Volume = 0;
+            }
         }
     }
 }
